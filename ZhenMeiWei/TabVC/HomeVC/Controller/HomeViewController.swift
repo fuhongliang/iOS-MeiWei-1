@@ -13,6 +13,9 @@ import LLCycleScrollView
 
 class HomeViewController: UIViewController ,LLCycleScrollViewDelegate{
 
+    var tempBtn = UIButton()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.white
@@ -81,7 +84,7 @@ class HomeViewController: UIViewController ,LLCycleScrollViewDelegate{
         
         let catergoryScroll = UIScrollView()
         catergoryScroll.contentSize = CGSize(width: 100*5+30, height: 162) // ContentSize属性
-        catergoryScroll.backgroundColor = .gray
+        catergoryScroll.backgroundColor = .white
         view.addSubview(catergoryScroll)
         
         addressIcon.snp.makeConstraints { make in
@@ -131,9 +134,7 @@ class HomeViewController: UIViewController ,LLCycleScrollViewDelegate{
             let btn = UIButton()
             btn.setImage(UIImage.init(imageLiteralResourceName: "home_ic_shuiguo"), for: UIControl.State.normal)
             catergoryScroll.addSubview(btn)
-            let tempBtn = btn
-            
-            if i/2 == 0{
+            if i%2 == 0{
                 if i == 0{
                     btn.snp.makeConstraints { make in
                         make.top.equalTo(catergoryScroll.snp.top).offset(15)
@@ -144,7 +145,7 @@ class HomeViewController: UIViewController ,LLCycleScrollViewDelegate{
                 }else{
                     btn.snp.makeConstraints { make in
                         make.top.equalTo(catergoryScroll.snp.top).offset(15)
-                        make.left.equalTo(tempBtn.snp.left).offset(60)
+                        make.left.equalTo(tempBtn.snp.right).offset(60)
                         make.height.equalTo(40)
                         make.width.equalTo(40)
                     }
@@ -160,14 +161,15 @@ class HomeViewController: UIViewController ,LLCycleScrollViewDelegate{
                     }
                 }else{
                     btn.snp.makeConstraints { make in
-                        make.top.equalTo(tempBtn.snp.top).offset(15)
+                        make.top.equalTo(tempBtn.snp.bottom).offset(15)
                         make.left.equalTo(tempBtn.snp.left).offset(0)
                         make.height.equalTo(40)
                         make.width.equalTo(40)
                     }
                 }
+                
             }
-            
+            tempBtn = btn
         }
         
 
