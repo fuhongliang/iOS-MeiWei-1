@@ -82,8 +82,17 @@ class HomeViewController: UIViewController ,LLCycleScrollViewDelegate{
         bannerView.delegate = self
         view.addSubview(bannerView)
         
+        let titleArr = ["美食","饮料","正餐","水果","简餐","小吃","夜宵","全部分类"]
+        let imgArr = ["home_ic_meishi","home_ic_yinliao","home_ic_zc","home_ic_shuiguo","home_ic_jianc","home_ic_xiaochi","home_ic_yexiao","home_ic_qbfl"]
+        
         let catergoryScroll = UIScrollView()
-        catergoryScroll.contentSize = CGSize(width: 100*5+30, height: 162) // ContentSize属性
+        if titleArr.count%2 == 0{
+            catergoryScroll.contentSize = CGSize(width: titleArr.count/2*100+8-56, height: 162) // ContentSize属性
+
+        }else{
+            catergoryScroll.contentSize = CGSize(width: (titleArr.count/2+1)*100+8-46, height: 162) // ContentSize属性
+
+        }
         catergoryScroll.backgroundColor = .white
         view.addSubview(catergoryScroll)
         
@@ -123,17 +132,22 @@ class HomeViewController: UIViewController ,LLCycleScrollViewDelegate{
         }
         catergoryScroll.snp.makeConstraints { make in
             make.right.equalTo(view.snp.right).offset(-15)
-            make.top.equalTo(bannerView.snp.bottom).offset(10)
+            make.top.equalTo(bannerView.snp.bottom).offset(0)
             make.left.equalTo(view.snp.left).offset(15)
             make.height.equalTo(162)
         }
         
-        let arr = ["1","2","3","4","5","6","7","8","9","10","11","12","13","14"]
 
-        for i in 0..<arr.count{
+        for i in 0..<titleArr.count{
             let btn = UIButton()
-            btn.setImage(UIImage.init(imageLiteralResourceName: "home_ic_shuiguo"), for: UIControl.State.normal)
+            btn.setImage(UIImage.init(imageLiteralResourceName: imgArr[i]), for: UIControl.State.normal)
             catergoryScroll.addSubview(btn)
+            let label = UILabel()
+            label.text = titleArr[i]
+            label.textColor = UIColor.hexColor(0x333333)
+            label.font = UIFont.systemFont(ofSize: 12)
+            catergoryScroll.addSubview(label)
+            
             if i%2 == 0{
                 if i == 0{
                     btn.snp.makeConstraints { make in
@@ -142,6 +156,10 @@ class HomeViewController: UIViewController ,LLCycleScrollViewDelegate{
                         make.height.equalTo(40)
                         make.width.equalTo(40)
                     }
+                    label.snp.makeConstraints { make in
+                        make.top.equalTo(btn.snp.bottom).offset(4)
+                        make.centerX.equalTo(btn.snp.centerX)
+                    }
                 }else{
                     btn.snp.makeConstraints { make in
                         make.top.equalTo(catergoryScroll.snp.top).offset(15)
@@ -149,22 +167,34 @@ class HomeViewController: UIViewController ,LLCycleScrollViewDelegate{
                         make.height.equalTo(40)
                         make.width.equalTo(40)
                     }
+                    label.snp.makeConstraints { make in
+                        make.top.equalTo(btn.snp.bottom).offset(4)
+                        make.centerX.equalTo(btn.snp.centerX)
+                    }
                 }
                 
             }else{
                 if i == 1{
                     btn.snp.makeConstraints { make in
-                        make.top.equalTo(tempBtn.snp.bottom).offset(15)
+                        make.top.equalTo(tempBtn.snp.bottom).offset(34)
                         make.left.equalTo(tempBtn.snp.left).offset(0)
                         make.height.equalTo(40)
                         make.width.equalTo(40)
                     }
+                    label.snp.makeConstraints { make in
+                        make.top.equalTo(btn.snp.bottom).offset(4)
+                        make.centerX.equalTo(btn.snp.centerX)
+                    }
                 }else{
                     btn.snp.makeConstraints { make in
-                        make.top.equalTo(tempBtn.snp.bottom).offset(15)
+                        make.top.equalTo(tempBtn.snp.bottom).offset(34)
                         make.left.equalTo(tempBtn.snp.left).offset(0)
                         make.height.equalTo(40)
                         make.width.equalTo(40)
+                    }
+                    label.snp.makeConstraints { make in
+                        make.top.equalTo(btn.snp.bottom).offset(4)
+                        make.centerX.equalTo(btn.snp.centerX)
                     }
                 }
                 
