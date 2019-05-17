@@ -1,0 +1,50 @@
+PODS:
+  - AFNetworking (3.2.1):
+    - AFNetworking/NSURLSession (= 3.2.1)
+    - AFNetworking/Reachability (= 3.2.1)
+    - AFNetworking/Security (= 3.2.1)
+    - AFNetworking/Serialization (= 3.2.1)
+    - AFNetworking/UIKit (= 3.2.1)
+  - AFNetworking/NSURLSession (3.2.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.2.1)
+  - AFNetworking/Security (3.2.1)
+  - AFNetworking/Serialization (3.2.1)
+  - AFNetworking/UIKit (3.2.1):
+    - AFNetworking/NSURLSession
+  - Kingfisher (4.10.1)
+  - LLCycleScrollView (1.5.4):
+    - Kingfisher (<= 4.10.1)
+  - MJRefresh (3.1.16)
+  - SnapKit (4.2.0)
+  - SwiftyJSON (4.2.0)
+
+DEPENDENCIES:
+  - AFNetworking
+  - LLCycleScrollView
+  - MJRefresh
+  - SnapKit
+  - SwiftyJSON (~> 4.0)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AFNetworking
+    - Kingfisher
+    - LLCycleScrollView
+    - MJRefresh
+    - SnapKit
+    - SwiftyJSON
+
+SPEC CHECKSUMS:
+  AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
+  LLCycleScrollView: 77f6e11980d1cd010ee9ee87e94da4e8026ccd21
+  MJRefresh: 7798e16e53a5ef7f332dd05b27664db4e29530fd
+  SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
+  SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
+
+PODFILE CHECKSUM: 7f4d6a1367e0a5a7e22176b6494545b073c14b85
+
+COCOAPODS: 1.6.1
