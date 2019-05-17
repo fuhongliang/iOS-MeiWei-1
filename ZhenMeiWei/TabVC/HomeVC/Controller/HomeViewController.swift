@@ -16,6 +16,7 @@ class HomeViewController: UIViewController ,LLCycleScrollViewDelegate{
     var tempBtn = UIButton()
     
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.white
@@ -32,6 +33,14 @@ class HomeViewController: UIViewController ,LLCycleScrollViewDelegate{
         self.navigationController?.isNavigationBarHidden = false
     }
     func createUI() {
+        
+        /**
+            headerview
+            轮播图，分类scrollview，优惠专区放在headerview上面，将整个headerview当作tableview的headerview
+        */
+        let headerBgView = UIView()
+        view.addSubview(headerBgView)
+        
         let addressIcon = UIImageView()
         addressIcon.image = UIImage.init(imageLiteralResourceName: "center_ic_shdz")
         view.addSubview(addressIcon)
@@ -80,22 +89,24 @@ class HomeViewController: UIViewController ,LLCycleScrollViewDelegate{
         // 模拟网络图片获取
         bannerView.imagePaths = imagesURLStrings
         bannerView.delegate = self
-        view.addSubview(bannerView)
+        headerBgView.addSubview(bannerView)
         
-        let titleArr = ["美食","饮料","正餐","水果","简餐","小吃","夜宵","全部分类"]
-        let imgArr = ["home_ic_meishi","home_ic_yinliao","home_ic_zc","home_ic_shuiguo","home_ic_jianc","home_ic_xiaochi","home_ic_yexiao","home_ic_qbfl"]
+        let titleArr = ["美食","饮料","正餐","水果","简餐","小吃","夜宵","龙虾","简餐","小吃","夜宵","全部分类"]
+        let imgArr = ["home_ic_meishi","home_ic_yinliao","home_ic_zc","home_ic_shuiguo","home_ic_jianc","home_ic_xiaochi","home_ic_yexiao","home_ic_qbfl","home_ic_jianc","home_ic_xiaochi","home_ic_yexiao","home_ic_qbfl"]
         
         let catergoryScroll = UIScrollView()
         if titleArr.count%2 == 0{
-            catergoryScroll.contentSize = CGSize(width: titleArr.count/2*100+8-56, height: 162) // ContentSize属性
-
+            catergoryScroll.contentSize = CGSize(width: titleArr.count/2*100+8-46, height: 162) // ContentSize属性
         }else{
             catergoryScroll.contentSize = CGSize(width: (titleArr.count/2+1)*100+8-46, height: 162) // ContentSize属性
-
         }
+        catergoryScroll.bounces = true
         catergoryScroll.backgroundColor = .white
-        view.addSubview(catergoryScroll)
+        headerBgView.addSubview(catergoryScroll)
         
+        let discountView = DiscountView.loadNib()
+        headerBgView.addSubview(discountView)
+
         addressIcon.snp.makeConstraints { make in
             make.top.equalTo(view.snp.top).offset(Status_H+14)
             make.left.equalTo(view.snp.left).offset(16)
@@ -124,19 +135,30 @@ class HomeViewController: UIViewController ,LLCycleScrollViewDelegate{
             make.left.equalTo(view.snp.left).offset(15)
             make.height.equalTo(33)
         }
+        headerBgView.snp.makeConstraints { make in
+            make.right.equalTo(view.snp.right).offset(0)
+            make.top.equalTo(searchBtn.snp.bottom).offset(0)
+            make.left.equalTo(view.snp.left).offset(0)
+            make.height.equalTo(476)
+        }
         bannerView.snp.makeConstraints { make in
-            make.right.equalTo(view.snp.right).offset(-15)
+            make.right.equalTo(headerBgView.snp.right).offset(-15)
             make.top.equalTo(searchBtn.snp.bottom).offset(12)
-            make.left.equalTo(view.snp.left).offset(15)
+            make.left.equalTo(headerBgView.snp.left).offset(15)
             make.height.equalTo(130)
         }
         catergoryScroll.snp.makeConstraints { make in
-            make.right.equalTo(view.snp.right).offset(-15)
+            make.right.equalTo(headerBgView.snp.right).offset(-15)
             make.top.equalTo(bannerView.snp.bottom).offset(0)
-            make.left.equalTo(view.snp.left).offset(15)
+            make.left.equalTo(headerBgView.snp.left).offset(15)
             make.height.equalTo(162)
         }
-        
+        discountView.snp.makeConstraints { make in
+            make.right.equalTo(headerBgView.snp.right).offset(0)
+            make.top.equalTo(catergoryScroll.snp.bottom).offset(5)
+            make.left.equalTo(headerBgView.snp.left).offset(0)
+            make.height.equalTo(167)
+        }
 
         for i in 0..<titleArr.count{
             let btn = UIButton()

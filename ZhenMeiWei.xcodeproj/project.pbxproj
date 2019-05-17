@@ -20,6 +20,11 @@
 		04F52695228D6CAF0019417D /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F52694228D6CAF0019417D /* OrderViewController.swift */; };
 		04F52697228D6CE70019417D /* MeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F52696228D6CE70019417D /* MeViewController.swift */; };
 		04F52699228D6D510019417D /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F52698228D6D510019417D /* TabBarViewController.swift */; };
+		04F526AF228EB8AF0019417D /* StoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F526AD228EB8AF0019417D /* StoreTableViewCell.swift */; };
+		04F526B0228EB8AF0019417D /* StoreTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04F526AE228EB8AF0019417D /* StoreTableViewCell.xib */; };
+		04F526B2228EBEAE0019417D /* DiscountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F526B1228EBEAE0019417D /* DiscountView.swift */; };
+		04F526B4228EBEC90019417D /* DiscountView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04F526B3228EBEC90019417D /* DiscountView.xib */; };
+		04F526B6228EC7870019417D /* NibloadProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F526B5228EC7870019417D /* NibloadProtocol.swift */; };
 		8D90AE1028C168F0E1941D07 /* Pods_ZhenMeiWei.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AE908EB8A3AD3F6212B1758 /* Pods_ZhenMeiWei.framework */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +67,11 @@
 		04F52696228D6CE70019417D /* MeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeViewController.swift; sourceTree = "<group>"; };
 		04F52698228D6D510019417D /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		04F5269F228E5D780019417D /* ZMW-Bridge-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ZMW-Bridge-Header.h"; sourceTree = "<group>"; };
+		04F526AD228EB8AF0019417D /* StoreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreTableViewCell.swift; sourceTree = "<group>"; };
+		04F526AE228EB8AF0019417D /* StoreTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoreTableViewCell.xib; sourceTree = "<group>"; };
+		04F526B1228EBEAE0019417D /* DiscountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscountView.swift; sourceTree = "<group>"; };
+		04F526B3228EBEC90019417D /* DiscountView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DiscountView.xib; sourceTree = "<group>"; };
+		04F526B5228EC7870019417D /* NibloadProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibloadProtocol.swift; sourceTree = "<group>"; };
 		2CBECFA33FC4515F9FC2EBC0 /* Pods_ZhenMeiWeiUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZhenMeiWeiUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AE908EB8A3AD3F6212B1758 /* Pods_ZhenMeiWei.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZhenMeiWei.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52B7960B74977408BCFCC7CF /* Pods-ZhenMeiWei.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZhenMeiWei.debug.xcconfig"; path = "Target Support Files/Pods-ZhenMeiWei/Pods-ZhenMeiWei.debug.xcconfig"; sourceTree = "<group>"; };
@@ -212,6 +222,7 @@
 			isa = PBXGroup;
 			children = (
 				04F5269F228E5D780019417D /* ZMW-Bridge-Header.h */,
+				04F526B5228EC7870019417D /* NibloadProtocol.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -227,6 +238,10 @@
 		04F526A1228E8D660019417D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				04F526AD228EB8AF0019417D /* StoreTableViewCell.swift */,
+				04F526AE228EB8AF0019417D /* StoreTableViewCell.xib */,
+				04F526B1228EBEAE0019417D /* DiscountView.swift */,
+				04F526B3228EBEC90019417D /* DiscountView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -407,7 +422,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04F526B4228EBEC90019417D /* DiscountView.xib in Resources */,
 				04F52668228D3E950019417D /* LaunchScreen.storyboard in Resources */,
+				04F526B0228EB8AF0019417D /* StoreTableViewCell.xib in Resources */,
 				04F52665228D3E950019417D /* Assets.xcassets in Resources */,
 				04F52663228D3E940019417D /* Main.storyboard in Resources */,
 			);
@@ -494,11 +511,14 @@
 				04F52699228D6D510019417D /* TabBarViewController.swift in Sources */,
 				04F52692228D694B0019417D /* BasicNavigationController.swift in Sources */,
 				04F52697228D6CE70019417D /* MeViewController.swift in Sources */,
+				04F526B2228EBEAE0019417D /* DiscountView.swift in Sources */,
+				04F526B6228EC7870019417D /* NibloadProtocol.swift in Sources */,
 				04F52660228D3E940019417D /* HomeViewController.swift in Sources */,
 				04F5268F228D5A2C0019417D /* UIColor+HexColor.swift in Sources */,
 				04F5268D228D5A260019417D /* Common.swift in Sources */,
 				04F5265E228D3E940019417D /* AppDelegate.swift in Sources */,
 				04F52695228D6CAF0019417D /* OrderViewController.swift in Sources */,
+				04F526AF228EB8AF0019417D /* StoreTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
