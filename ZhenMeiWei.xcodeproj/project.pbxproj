@@ -12,8 +12,6 @@
 		04F52663228D3E940019417D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04F52661228D3E940019417D /* Main.storyboard */; };
 		04F52665228D3E950019417D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04F52664228D3E950019417D /* Assets.xcassets */; };
 		04F52668228D3E950019417D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04F52666228D3E950019417D /* LaunchScreen.storyboard */; };
-		04F52673228D3E950019417D /* ZhenMeiWeiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F52672228D3E950019417D /* ZhenMeiWeiTests.swift */; };
-		04F5267E228D3E950019417D /* ZhenMeiWeiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F5267D228D3E950019417D /* ZhenMeiWeiUITests.swift */; };
 		04F5268D228D5A260019417D /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F5268C228D5A260019417D /* Common.swift */; };
 		04F5268F228D5A2C0019417D /* UIColor+HexColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F5268E228D5A2C0019417D /* UIColor+HexColor.swift */; };
 		04F52692228D694B0019417D /* BasicNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F52691228D694B0019417D /* BasicNavigationController.swift */; };
@@ -34,23 +32,6 @@
 		8D90AE1028C168F0E1941D07 /* Pods_ZhenMeiWei.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AE908EB8A3AD3F6212B1758 /* Pods_ZhenMeiWei.framework */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		04F5266F228D3E950019417D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 04F52652228D3E940019417D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 04F52659228D3E940019417D;
-			remoteInfo = ZhenMeiWei;
-		};
-		04F5267A228D3E950019417D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 04F52652228D3E940019417D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 04F52659228D3E940019417D;
-			remoteInfo = ZhenMeiWei;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		01E9C21BCA49D8998814A08A /* Pods_ZhenMeiWeiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZhenMeiWeiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		04F5265A228D3E940019417D /* ZhenMeiWei.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZhenMeiWei.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -60,12 +41,6 @@
 		04F52664228D3E950019417D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04F52667228D3E950019417D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04F52669228D3E950019417D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		04F5266E228D3E950019417D /* ZhenMeiWeiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZhenMeiWeiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		04F52672228D3E950019417D /* ZhenMeiWeiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZhenMeiWeiTests.swift; sourceTree = "<group>"; };
-		04F52674228D3E950019417D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		04F52679228D3E950019417D /* ZhenMeiWeiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZhenMeiWeiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		04F5267D228D3E950019417D /* ZhenMeiWeiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZhenMeiWeiUITests.swift; sourceTree = "<group>"; };
-		04F5267F228D3E950019417D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04F5268C228D5A260019417D /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		04F5268E228D5A2C0019417D /* UIColor+HexColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+HexColor.swift"; sourceTree = "<group>"; };
 		04F52691228D694B0019417D /* BasicNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicNavigationController.swift; sourceTree = "<group>"; };
@@ -98,20 +73,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		04F5266B228D3E950019417D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		04F52676228D3E950019417D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -119,8 +80,6 @@
 			isa = PBXGroup;
 			children = (
 				04F5265C228D3E940019417D /* ZhenMeiWei */,
-				04F52671228D3E950019417D /* ZhenMeiWeiTests */,
-				04F5267C228D3E950019417D /* ZhenMeiWeiUITests */,
 				04F5265B228D3E940019417D /* Products */,
 				2EA24E49B28637109909FDDF /* Pods */,
 				337C4FFE3F20CF28B8862945 /* Frameworks */,
@@ -131,8 +90,6 @@
 			isa = PBXGroup;
 			children = (
 				04F5265A228D3E940019417D /* ZhenMeiWei.app */,
-				04F5266E228D3E950019417D /* ZhenMeiWeiTests.xctest */,
-				04F52679228D3E950019417D /* ZhenMeiWeiUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -153,24 +110,6 @@
 				0A5EBCC32292AFB400AA414F /* Global.swift */,
 			);
 			path = ZhenMeiWei;
-			sourceTree = "<group>";
-		};
-		04F52671228D3E950019417D /* ZhenMeiWeiTests */ = {
-			isa = PBXGroup;
-			children = (
-				04F52672228D3E950019417D /* ZhenMeiWeiTests.swift */,
-				04F52674228D3E950019417D /* Info.plist */,
-			);
-			path = ZhenMeiWeiTests;
-			sourceTree = "<group>";
-		};
-		04F5267C228D3E950019417D /* ZhenMeiWeiUITests */ = {
-			isa = PBXGroup;
-			children = (
-				04F5267D228D3E950019417D /* ZhenMeiWeiUITests.swift */,
-				04F5267F228D3E950019417D /* Info.plist */,
-			);
-			path = ZhenMeiWeiUITests;
 			sourceTree = "<group>";
 		};
 		04F5268B228D59E20019417D /* Category */ = {
@@ -378,42 +317,6 @@
 			productReference = 04F5265A228D3E940019417D /* ZhenMeiWei.app */;
 			productType = "com.apple.product-type.application";
 		};
-		04F5266D228D3E950019417D /* ZhenMeiWeiTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 04F52685228D3E950019417D /* Build configuration list for PBXNativeTarget "ZhenMeiWeiTests" */;
-			buildPhases = (
-				04F5266A228D3E950019417D /* Sources */,
-				04F5266B228D3E950019417D /* Frameworks */,
-				04F5266C228D3E950019417D /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				04F52670228D3E950019417D /* PBXTargetDependency */,
-			);
-			name = ZhenMeiWeiTests;
-			productName = ZhenMeiWeiTests;
-			productReference = 04F5266E228D3E950019417D /* ZhenMeiWeiTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		04F52678228D3E950019417D /* ZhenMeiWeiUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 04F52688228D3E950019417D /* Build configuration list for PBXNativeTarget "ZhenMeiWeiUITests" */;
-			buildPhases = (
-				04F52675228D3E950019417D /* Sources */,
-				04F52676228D3E950019417D /* Frameworks */,
-				04F52677228D3E950019417D /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				04F5267B228D3E950019417D /* PBXTargetDependency */,
-			);
-			name = ZhenMeiWeiUITests;
-			productName = ZhenMeiWeiUITests;
-			productReference = 04F52679228D3E950019417D /* ZhenMeiWeiUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -426,14 +329,6 @@
 				TargetAttributes = {
 					04F52659228D3E940019417D = {
 						CreatedOnToolsVersion = 10.1;
-					};
-					04F5266D228D3E950019417D = {
-						CreatedOnToolsVersion = 10.1;
-						TestTargetID = 04F52659228D3E940019417D;
-					};
-					04F52678228D3E950019417D = {
-						CreatedOnToolsVersion = 10.1;
-						TestTargetID = 04F52659228D3E940019417D;
 					};
 				};
 			};
@@ -451,8 +346,6 @@
 			projectRoot = "";
 			targets = (
 				04F52659228D3E940019417D /* ZhenMeiWei */,
-				04F5266D228D3E950019417D /* ZhenMeiWeiTests */,
-				04F52678228D3E950019417D /* ZhenMeiWeiUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -467,20 +360,6 @@
 				04F526B0228EB8AF0019417D /* StoreTableViewCell.xib in Resources */,
 				04F52665228D3E950019417D /* Assets.xcassets in Resources */,
 				04F52663228D3E940019417D /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		04F5266C228D3E950019417D /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		04F52677228D3E950019417D /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -576,36 +455,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		04F5266A228D3E950019417D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				04F52673228D3E950019417D /* ZhenMeiWeiTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		04F52675228D3E950019417D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				04F5267E228D3E950019417D /* ZhenMeiWeiUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		04F52670228D3E950019417D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 04F52659228D3E940019417D /* ZhenMeiWei */;
-			targetProxy = 04F5266F228D3E950019417D /* PBXContainerItemProxy */;
-		};
-		04F5267B228D3E950019417D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 04F52659228D3E940019417D /* ZhenMeiWei */;
-			targetProxy = 04F5267A228D3E950019417D /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		04F52661228D3E940019417D /* Main.storyboard */ = {
@@ -751,7 +601,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6L4S78C444;
 				INFOPLIST_FILE = ZhenMeiWei/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -759,8 +609,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ifhu.ZhenMeiWei;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -772,7 +622,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6L4S78C444;
 				INFOPLIST_FILE = ZhenMeiWei/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -780,90 +630,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ifhu.ZhenMeiWei;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		04F52686228D3E950019417D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6L4S78C444;
-				INFOPLIST_FILE = ZhenMeiWeiTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ifhu.ZhenMeiWeiTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZhenMeiWei.app/ZhenMeiWei";
-			};
-			name = Debug;
-		};
-		04F52687228D3E950019417D /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6L4S78C444;
-				INFOPLIST_FILE = ZhenMeiWeiTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ifhu.ZhenMeiWeiTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZhenMeiWei.app/ZhenMeiWei";
-			};
-			name = Release;
-		};
-		04F52689228D3E950019417D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6L4S78C444;
-				INFOPLIST_FILE = ZhenMeiWeiUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ifhu.ZhenMeiWeiUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = ZhenMeiWei;
-			};
-			name = Debug;
-		};
-		04F5268A228D3E950019417D /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6L4S78C444;
-				INFOPLIST_FILE = ZhenMeiWeiUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ifhu.ZhenMeiWeiUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = ZhenMeiWei;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -884,24 +652,6 @@
 			buildConfigurations = (
 				04F52683228D3E950019417D /* Debug */,
 				04F52684228D3E950019417D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		04F52685228D3E950019417D /* Build configuration list for PBXNativeTarget "ZhenMeiWeiTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				04F52686228D3E950019417D /* Debug */,
-				04F52687228D3E950019417D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		04F52688228D3E950019417D /* Build configuration list for PBXNativeTarget "ZhenMeiWeiUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				04F52689228D3E950019417D /* Debug */,
-				04F5268A228D3E950019417D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
