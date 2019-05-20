@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0408E8AE2292A241000A7AA5 /* ChooseAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0408E8AD2292A241000A7AA5 /* ChooseAddressViewController.swift */; };
-		0408E8B02292AD93000A7AA5 /* AddressHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0408E8AF2292AD93000A7AA5 /* AddressHeaderView.swift */; };
 		04F5265E228D3E940019417D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F5265D228D3E940019417D /* AppDelegate.swift */; };
 		04F52660228D3E940019417D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F5265F228D3E940019417D /* HomeViewController.swift */; };
 		04F52663228D3E940019417D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04F52661228D3E940019417D /* Main.storyboard */; };
@@ -27,8 +25,12 @@
 		04F526B2228EBEAE0019417D /* DiscountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F526B1228EBEAE0019417D /* DiscountView.swift */; };
 		04F526B4228EBEC90019417D /* DiscountView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04F526B3228EBEC90019417D /* DiscountView.xib */; };
 		04F526B6228EC7870019417D /* NibloadProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F526B5228EC7870019417D /* NibloadProtocol.swift */; };
-		04F526B8229268300019417D /* SectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F526B7229268300019417D /* SectionHeaderView.swift */; };
-		04F526BA229268400019417D /* SectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04F526B9229268400019417D /* SectionHeaderView.xib */; };
+		0A5EBCC22292AEEF00AA414F /* FAPIServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5EBCC12292AEEF00AA414F /* FAPIServices.swift */; };
+		0A5EBCC42292AFB400AA414F /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5EBCC32292AFB400AA414F /* Global.swift */; };
+		0A5EBCC62292B2E600AA414F /* FAPIResponseModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5EBCC52292B2E600AA414F /* FAPIResponseModels.swift */; };
+		0A5EBCC82292BA7D00AA414F /* FAPIToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5EBCC72292BA7D00AA414F /* FAPIToken.swift */; };
+		0A5EBCCA2292BAC900AA414F /* FAPIUserServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5EBCC92292BAC900AA414F /* FAPIUserServices.swift */; };
+		0A5EBCCC2292BB3800AA414F /* FAPIUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5EBCCB2292BB3800AA414F /* FAPIUser.swift */; };
 		8D90AE1028C168F0E1941D07 /* Pods_ZhenMeiWei.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AE908EB8A3AD3F6212B1758 /* Pods_ZhenMeiWei.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,8 +53,6 @@
 
 /* Begin PBXFileReference section */
 		01E9C21BCA49D8998814A08A /* Pods_ZhenMeiWeiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZhenMeiWeiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0408E8AD2292A241000A7AA5 /* ChooseAddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseAddressViewController.swift; sourceTree = "<group>"; };
-		0408E8AF2292AD93000A7AA5 /* AddressHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressHeaderView.swift; sourceTree = "<group>"; };
 		04F5265A228D3E940019417D /* ZhenMeiWei.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZhenMeiWei.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04F5265D228D3E940019417D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04F5265F228D3E940019417D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -72,14 +72,17 @@
 		04F52694228D6CAF0019417D /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
 		04F52696228D6CE70019417D /* MeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeViewController.swift; sourceTree = "<group>"; };
 		04F52698228D6D510019417D /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
-		04F5269F228E5D780019417D /* ZMW-Bridge-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ZMW-Bridge-Header.h"; sourceTree = "<group>"; };
 		04F526AD228EB8AF0019417D /* StoreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreTableViewCell.swift; sourceTree = "<group>"; };
 		04F526AE228EB8AF0019417D /* StoreTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoreTableViewCell.xib; sourceTree = "<group>"; };
 		04F526B1228EBEAE0019417D /* DiscountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscountView.swift; sourceTree = "<group>"; };
 		04F526B3228EBEC90019417D /* DiscountView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DiscountView.xib; sourceTree = "<group>"; };
 		04F526B5228EC7870019417D /* NibloadProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibloadProtocol.swift; sourceTree = "<group>"; };
-		04F526B7229268300019417D /* SectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderView.swift; sourceTree = "<group>"; };
-		04F526B9229268400019417D /* SectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionHeaderView.xib; sourceTree = "<group>"; };
+		0A5EBCC12292AEEF00AA414F /* FAPIServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAPIServices.swift; sourceTree = "<group>"; };
+		0A5EBCC32292AFB400AA414F /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
+		0A5EBCC52292B2E600AA414F /* FAPIResponseModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAPIResponseModels.swift; sourceTree = "<group>"; };
+		0A5EBCC72292BA7D00AA414F /* FAPIToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAPIToken.swift; sourceTree = "<group>"; };
+		0A5EBCC92292BAC900AA414F /* FAPIUserServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAPIUserServices.swift; sourceTree = "<group>"; };
+		0A5EBCCB2292BB3800AA414F /* FAPIUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAPIUser.swift; sourceTree = "<group>"; };
 		2CBECFA33FC4515F9FC2EBC0 /* Pods_ZhenMeiWeiUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZhenMeiWeiUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AE908EB8A3AD3F6212B1758 /* Pods_ZhenMeiWei.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZhenMeiWei.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52B7960B74977408BCFCC7CF /* Pods-ZhenMeiWei.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZhenMeiWei.debug.xcconfig"; path = "Target Support Files/Pods-ZhenMeiWei/Pods-ZhenMeiWei.debug.xcconfig"; sourceTree = "<group>"; };
@@ -112,31 +115,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0408E8AA2292A1D9000A7AA5 /* AddressVC */ = {
-			isa = PBXGroup;
-			children = (
-				0408E8AB2292A1F7000A7AA5 /* Controller */,
-				0408E8AC2292A203000A7AA5 /* View */,
-			);
-			path = AddressVC;
-			sourceTree = "<group>";
-		};
-		0408E8AB2292A1F7000A7AA5 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				0408E8AD2292A241000A7AA5 /* ChooseAddressViewController.swift */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		0408E8AC2292A203000A7AA5 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				0408E8AF2292AD93000A7AA5 /* AddressHeaderView.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		04F52651228D3E940019417D = {
 			isa = PBXGroup;
 			children = (
@@ -162,6 +140,7 @@
 		04F5265C228D3E940019417D /* ZhenMeiWei */ = {
 			isa = PBXGroup;
 			children = (
+				0A5EBCBE2292AD3A00AA414F /* FAPI */,
 				04F5269D228D753A0019417D /* Tools */,
 				04F52690228D68EC0019417D /* Basic */,
 				04F52693228D6C610019417D /* TabVC */,
@@ -171,6 +150,7 @@
 				04F52664228D3E950019417D /* Assets.xcassets */,
 				04F52666228D3E950019417D /* LaunchScreen.storyboard */,
 				04F52669228D3E950019417D /* Info.plist */,
+				0A5EBCC32292AFB400AA414F /* Global.swift */,
 			);
 			path = ZhenMeiWei;
 			sourceTree = "<group>";
@@ -217,7 +197,6 @@
 				04F5269A228D74F70019417D /* HomeVC */,
 				04F5269B228D75000019417D /* OrderVC */,
 				04F5269C228D750A0019417D /* MeVC */,
-				0408E8AA2292A1D9000A7AA5 /* AddressVC */,
 			);
 			path = TabVC;
 			sourceTree = "<group>";
@@ -255,7 +234,6 @@
 		04F5269D228D753A0019417D /* Tools */ = {
 			isa = PBXGroup;
 			children = (
-				04F5269F228E5D780019417D /* ZMW-Bridge-Header.h */,
 				04F526B5228EC7870019417D /* NibloadProtocol.swift */,
 			);
 			path = Tools;
@@ -276,8 +254,6 @@
 				04F526AE228EB8AF0019417D /* StoreTableViewCell.xib */,
 				04F526B1228EBEAE0019417D /* DiscountView.swift */,
 				04F526B3228EBEC90019417D /* DiscountView.xib */,
-				04F526B7229268300019417D /* SectionHeaderView.swift */,
-				04F526B9229268400019417D /* SectionHeaderView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -331,6 +307,34 @@
 				04F52696228D6CE70019417D /* MeViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		0A5EBCBE2292AD3A00AA414F /* FAPI */ = {
+			isa = PBXGroup;
+			children = (
+				0A5EBCC02292AE8D00AA414F /* Services */,
+				0A5EBCBF2292AE7B00AA414F /* Models */,
+			);
+			path = FAPI;
+			sourceTree = "<group>";
+		};
+		0A5EBCBF2292AE7B00AA414F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0A5EBCC52292B2E600AA414F /* FAPIResponseModels.swift */,
+				0A5EBCC72292BA7D00AA414F /* FAPIToken.swift */,
+				0A5EBCCB2292BB3800AA414F /* FAPIUser.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0A5EBCC02292AE8D00AA414F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				0A5EBCC12292AEEF00AA414F /* FAPIServices.swift */,
+				0A5EBCC92292BAC900AA414F /* FAPIUserServices.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		2EA24E49B28637109909FDDF /* Pods */ = {
@@ -459,7 +463,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				04F526B4228EBEC90019417D /* DiscountView.xib in Resources */,
-				04F526BA229268400019417D /* SectionHeaderView.xib in Resources */,
 				04F52668228D3E950019417D /* LaunchScreen.storyboard in Resources */,
 				04F526B0228EB8AF0019417D /* StoreTableViewCell.xib in Resources */,
 				04F52665228D3E950019417D /* Assets.xcassets in Resources */,
@@ -516,9 +519,13 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-ZhenMeiWei/Pods-ZhenMeiWei-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/LLCycleScrollView/LLCycleScrollView.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
@@ -527,9 +534,13 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LLCycleScrollView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
@@ -545,20 +556,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A5EBCC62292B2E600AA414F /* FAPIResponseModels.swift in Sources */,
 				04F52699228D6D510019417D /* TabBarViewController.swift in Sources */,
 				04F52692228D694B0019417D /* BasicNavigationController.swift in Sources */,
+				0A5EBCCC2292BB3800AA414F /* FAPIUser.swift in Sources */,
 				04F52697228D6CE70019417D /* MeViewController.swift in Sources */,
+				0A5EBCCA2292BAC900AA414F /* FAPIUserServices.swift in Sources */,
 				04F526B2228EBEAE0019417D /* DiscountView.swift in Sources */,
 				04F526B6228EC7870019417D /* NibloadProtocol.swift in Sources */,
+				0A5EBCC42292AFB400AA414F /* Global.swift in Sources */,
+				0A5EBCC82292BA7D00AA414F /* FAPIToken.swift in Sources */,
 				04F52660228D3E940019417D /* HomeViewController.swift in Sources */,
 				04F5268F228D5A2C0019417D /* UIColor+HexColor.swift in Sources */,
-				04F526B8229268300019417D /* SectionHeaderView.swift in Sources */,
 				04F5268D228D5A260019417D /* Common.swift in Sources */,
 				04F5265E228D3E940019417D /* AppDelegate.swift in Sources */,
-				0408E8B02292AD93000A7AA5 /* AddressHeaderView.swift in Sources */,
+				0A5EBCC22292AEEF00AA414F /* FAPIServices.swift in Sources */,
 				04F52695228D6CAF0019417D /* OrderViewController.swift in Sources */,
 				04F526AF228EB8AF0019417D /* StoreTableViewCell.swift in Sources */,
-				0408E8AE2292A241000A7AA5 /* ChooseAddressViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -744,7 +758,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ifhu.ZhenMeiWei;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/mac/iOS-ZhenMeiWei/ZhenMeiWei/Tools/ZMW-Bridge-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -765,7 +779,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ifhu.ZhenMeiWei;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/mac/iOS-ZhenMeiWei/ZhenMeiWei/Tools/ZMW-Bridge-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

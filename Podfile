@@ -12,5 +12,7 @@ target 'ZhenMeiWei' do
   pod 'SwiftyJSON', '~> 4.0'
   pod 'MJRefresh'
   pod 'LLCycleScrollView'
-
+  pod 'Moya', '12.0.1'
+  
+  pod 'MBProgressHUD'
 end
