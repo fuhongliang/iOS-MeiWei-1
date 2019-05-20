@@ -72,7 +72,6 @@
 		04F52694228D6CAF0019417D /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
 		04F52696228D6CE70019417D /* MeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeViewController.swift; sourceTree = "<group>"; };
 		04F52698228D6D510019417D /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
-		04F5269F228E5D780019417D /* ZMW-Bridge-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ZMW-Bridge-Header.h"; sourceTree = "<group>"; };
 		04F526AD228EB8AF0019417D /* StoreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreTableViewCell.swift; sourceTree = "<group>"; };
 		04F526AE228EB8AF0019417D /* StoreTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoreTableViewCell.xib; sourceTree = "<group>"; };
 		04F526B1228EBEAE0019417D /* DiscountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscountView.swift; sourceTree = "<group>"; };
@@ -255,7 +254,6 @@
 		04F5269D228D753A0019417D /* Tools */ = {
 			isa = PBXGroup;
 			children = (
-				04F5269F228E5D780019417D /* ZMW-Bridge-Header.h */,
 				04F526B5228EC7870019417D /* NibloadProtocol.swift */,
 			);
 			path = Tools;
@@ -744,7 +742,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ifhu.ZhenMeiWei;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/mac/iOS-ZhenMeiWei/ZhenMeiWei/Tools/ZMW-Bridge-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -765,7 +763,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ifhu.ZhenMeiWei;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/mac/iOS-ZhenMeiWei/ZhenMeiWei/Tools/ZMW-Bridge-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
