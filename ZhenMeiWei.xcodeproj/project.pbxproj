@@ -29,6 +29,10 @@
 		0A5EBCC82292BA7D00AA414F /* FAPIToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5EBCC72292BA7D00AA414F /* FAPIToken.swift */; };
 		0A5EBCCA2292BAC900AA414F /* FAPIUserServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5EBCC92292BAC900AA414F /* FAPIUserServices.swift */; };
 		0A5EBCCC2292BB3800AA414F /* FAPIUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5EBCCB2292BB3800AA414F /* FAPIUser.swift */; };
+		0A5EBCD22292CE5200AA414F /* ChooseAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5EBCCF2292CE5200AA414F /* ChooseAddressViewController.swift */; };
+		0A5EBCD32292CE5200AA414F /* AddressHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5EBCD12292CE5200AA414F /* AddressHeaderView.swift */; };
+		0A5EBCD62292CE5F00AA414F /* SectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5EBCD42292CE5F00AA414F /* SectionHeaderView.swift */; };
+		0A5EBCD72292CE5F00AA414F /* SectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A5EBCD52292CE5F00AA414F /* SectionHeaderView.xib */; };
 		8D90AE1028C168F0E1941D07 /* Pods_ZhenMeiWei.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AE908EB8A3AD3F6212B1758 /* Pods_ZhenMeiWei.framework */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +62,10 @@
 		0A5EBCC72292BA7D00AA414F /* FAPIToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAPIToken.swift; sourceTree = "<group>"; };
 		0A5EBCC92292BAC900AA414F /* FAPIUserServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAPIUserServices.swift; sourceTree = "<group>"; };
 		0A5EBCCB2292BB3800AA414F /* FAPIUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAPIUser.swift; sourceTree = "<group>"; };
+		0A5EBCCF2292CE5200AA414F /* ChooseAddressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseAddressViewController.swift; sourceTree = "<group>"; };
+		0A5EBCD12292CE5200AA414F /* AddressHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressHeaderView.swift; sourceTree = "<group>"; };
+		0A5EBCD42292CE5F00AA414F /* SectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionHeaderView.swift; sourceTree = "<group>"; };
+		0A5EBCD52292CE5F00AA414F /* SectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SectionHeaderView.xib; sourceTree = "<group>"; };
 		2CBECFA33FC4515F9FC2EBC0 /* Pods_ZhenMeiWeiUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZhenMeiWeiUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AE908EB8A3AD3F6212B1758 /* Pods_ZhenMeiWei.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZhenMeiWei.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52B7960B74977408BCFCC7CF /* Pods-ZhenMeiWei.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZhenMeiWei.debug.xcconfig"; path = "Target Support Files/Pods-ZhenMeiWei/Pods-ZhenMeiWei.debug.xcconfig"; sourceTree = "<group>"; };
@@ -133,6 +141,7 @@
 		04F52693228D6C610019417D /* TabVC */ = {
 			isa = PBXGroup;
 			children = (
+				0A5EBCCD2292CE5200AA414F /* AddressVC */,
 				04F5269A228D74F70019417D /* HomeVC */,
 				04F5269B228D75000019417D /* OrderVC */,
 				04F5269C228D750A0019417D /* MeVC */,
@@ -189,6 +198,8 @@
 		04F526A1228E8D660019417D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0A5EBCD42292CE5F00AA414F /* SectionHeaderView.swift */,
+				0A5EBCD52292CE5F00AA414F /* SectionHeaderView.xib */,
 				04F526AD228EB8AF0019417D /* StoreTableViewCell.swift */,
 				04F526AE228EB8AF0019417D /* StoreTableViewCell.xib */,
 				04F526B1228EBEAE0019417D /* DiscountView.swift */,
@@ -276,6 +287,31 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		0A5EBCCD2292CE5200AA414F /* AddressVC */ = {
+			isa = PBXGroup;
+			children = (
+				0A5EBCCE2292CE5200AA414F /* Controller */,
+				0A5EBCD02292CE5200AA414F /* View */,
+			);
+			path = AddressVC;
+			sourceTree = "<group>";
+		};
+		0A5EBCCE2292CE5200AA414F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0A5EBCCF2292CE5200AA414F /* ChooseAddressViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0A5EBCD02292CE5200AA414F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0A5EBCD12292CE5200AA414F /* AddressHeaderView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		2EA24E49B28637109909FDDF /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -356,6 +392,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04F526B4228EBEC90019417D /* DiscountView.xib in Resources */,
+				0A5EBCD72292CE5F00AA414F /* SectionHeaderView.xib in Resources */,
 				04F52668228D3E950019417D /* LaunchScreen.storyboard in Resources */,
 				04F526B0228EB8AF0019417D /* StoreTableViewCell.xib in Resources */,
 				04F52665228D3E950019417D /* Assets.xcassets in Resources */,
@@ -435,17 +472,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A5EBCD22292CE5200AA414F /* ChooseAddressViewController.swift in Sources */,
 				0A5EBCC62292B2E600AA414F /* FAPIResponseModels.swift in Sources */,
 				04F52699228D6D510019417D /* TabBarViewController.swift in Sources */,
 				04F52692228D694B0019417D /* BasicNavigationController.swift in Sources */,
 				0A5EBCCC2292BB3800AA414F /* FAPIUser.swift in Sources */,
 				04F52697228D6CE70019417D /* MeViewController.swift in Sources */,
 				0A5EBCCA2292BAC900AA414F /* FAPIUserServices.swift in Sources */,
+				0A5EBCD62292CE5F00AA414F /* SectionHeaderView.swift in Sources */,
 				04F526B2228EBEAE0019417D /* DiscountView.swift in Sources */,
 				04F526B6228EC7870019417D /* NibloadProtocol.swift in Sources */,
 				0A5EBCC42292AFB400AA414F /* Global.swift in Sources */,
 				0A5EBCC82292BA7D00AA414F /* FAPIToken.swift in Sources */,
 				04F52660228D3E940019417D /* HomeViewController.swift in Sources */,
+				0A5EBCD32292CE5200AA414F /* AddressHeaderView.swift in Sources */,
 				04F5268F228D5A2C0019417D /* UIColor+HexColor.swift in Sources */,
 				04F5268D228D5A260019417D /* Common.swift in Sources */,
 				04F5265E228D3E940019417D /* AppDelegate.swift in Sources */,

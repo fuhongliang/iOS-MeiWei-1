@@ -15,14 +15,13 @@ let Status_H = UIApplication.shared.statusBarFrame.height
 
 let LineHeight =  (1 / UIScreen.main.scale)
 
-
 let is_iPhoneX = (Screen_W == 375.0 && Screen_H == 812.0 ? true : false)
 let kNavibarH: CGFloat = is_iPhoneX ? 88.0 : 64.0
 let kTabbarH: CGFloat = is_iPhoneX ? 49.0+34.0 : 49.0
 let kStatusbarH: CGFloat = is_iPhoneX ? 44.0 : 20.0
 let iPhoneXBottomH: CGFloat = 34.0
 let iPhoneXTopH: CGFloat = 24.0
-let ViewStart_Y = kNavibarH + kStatusbarH
+let ViewStart_Y = 44 + kStatusbarH
 
 
 let kThemeWhiteColor = UIColor.hexColor(0xFFFFFF)
