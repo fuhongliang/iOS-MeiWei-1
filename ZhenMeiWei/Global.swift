@@ -12,6 +12,16 @@ import Kingfisher
 import SnapKit
 import MJRefresh
 
+extension UIColor {
+    class var background: UIColor {
+        return UIColor(r: 245, g: 245, b: 245)
+    }
+    
+    class var theme: UIColor {
+        return UIColor(r: 29, g: 221, b: 43)
+    }
+}
+
 
 let screenWidth = UIScreen.main.bounds.width
 let screenHeight = UIScreen.main.bounds.height
