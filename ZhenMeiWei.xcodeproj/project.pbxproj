@@ -107,8 +107,8 @@
 		04A0DB0322940B9F005F02F3 /* ParallaxHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParallaxHeader.swift; sourceTree = "<group>"; };
 		04A0DB0422940B9F005F02F3 /* ParallaxHeaderMode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParallaxHeaderMode.swift; sourceTree = "<group>"; };
 		04A0DB0522940B9F005F02F3 /* UIScrollView+ParallaxHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+ParallaxHeader.swift"; sourceTree = "<group>"; };
-		04A0DB0922940C4F005F02F3 /* UMeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UMeView.swift; path = ZhenMeiWei/FAPI/Models/UMeView.swift; sourceTree = SOURCE_ROOT; };
-		04A0DB0A22940C4F005F02F3 /* UMineHead.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UMineHead.swift; path = ZhenMeiWei/FAPI/Models/UMineHead.swift; sourceTree = SOURCE_ROOT; };
+		04A0DB0922940C4F005F02F3 /* UMeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UMeView.swift; path = ZhenMeiWei/Procedure/Me/View/UMeView.swift; sourceTree = SOURCE_ROOT; };
+		04A0DB0A22940C4F005F02F3 /* UMineHead.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UMineHead.swift; path = ZhenMeiWei/Procedure/Me/View/UMineHead.swift; sourceTree = SOURCE_ROOT; };
 		04F5265A228D3E940019417D /* ZhenMeiWei.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZhenMeiWei.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04F5265D228D3E940019417D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04F52662228D3E940019417D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -149,7 +149,6 @@
 				04A0DAA022940995005F02F3 /* UBaseCollectionReusableView.swift */,
 				04A0DAA122940995005F02F3 /* UBaseCollectionViewCell.swift */,
 				04A0DAA222940995005F02F3 /* UBaseTableViewCell.swift */,
-				04A0DAA322940995005F02F3 /* UMeServicesCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -242,8 +241,7 @@
 		04A0DAD022940AEE005F02F3 /* Me */ = {
 			isa = PBXGroup;
 			children = (
-				04A0DB0922940C4F005F02F3 /* UMeView.swift */,
-				04A0DB0A22940C4F005F02F3 /* UMineHead.swift */,
+				0A3D803122940DAA00EA715B /* View */,
 				04A0DAD122940AEE005F02F3 /* Controller */,
 			);
 			path = Me;
@@ -401,6 +399,16 @@
 				04F526B5228EC7870019417D /* NibloadProtocol.swift */,
 			);
 			path = Tools;
+			sourceTree = "<group>";
+		};
+		0A3D803122940DAA00EA715B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				04A0DAA322940995005F02F3 /* UMeServicesCell.swift */,
+				04A0DB0922940C4F005F02F3 /* UMeView.swift */,
+				04A0DB0A22940C4F005F02F3 /* UMineHead.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		0A5EBCBE2292AD3A00AA414F /* FAPI */ = {
