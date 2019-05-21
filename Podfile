@@ -13,6 +13,7 @@ target 'ZhenMeiWei' do
   pod 'MJRefresh'
   pod 'LLCycleScrollView'
   pod 'Moya', '12.0.1'
-  
+  pod 'Then'
   pod 'MBProgressHUD'
+  pod 'Reusable'
 end
