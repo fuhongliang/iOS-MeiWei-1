@@ -66,6 +66,7 @@ class HomeViewController: UIViewController ,NibloadProtocol,LLCycleScrollViewDel
         //消息图标
         let message = UIButton()
         message.setImage(UIImage.init(imageLiteralResourceName: "top_ic_xxx"), for: UIControl.State.normal)
+        message.addTarget(self, action: #selector(goMessage), for: UIControl.Event.touchUpInside)
         view.addSubview(message)
         
         //搜索框
@@ -328,6 +329,11 @@ class HomeViewController: UIViewController ,NibloadProtocol,LLCycleScrollViewDel
         vc.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(vc, animated: true)
         
+    }
+    
+    @objc func goMessage() {
+        let vc = ShoppingCartViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
 }

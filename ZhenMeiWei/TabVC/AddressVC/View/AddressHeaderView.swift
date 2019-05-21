@@ -47,6 +47,10 @@ class AddressHeaderView: UIView {
         searchText.font = UIFont.systemFont(ofSize: 14)
         topBgView.addSubview(searchText)
         
+        let line2 = UIView()
+        line2.backgroundColor = UIColor.hexColor(0xe5e5e5)
+        self.addSubview(line2)
+        
         topBgView.snp.makeConstraints { make in
             make.left.equalTo(self.snp.left).offset(15)
             make.top.equalTo(self.snp.top).offset(6)
@@ -85,6 +89,12 @@ class AddressHeaderView: UIView {
         searchText.snp.makeConstraints {  make in
             make.left.equalTo(searchIcon.snp.right).offset(10)
             make.centerY.equalTo(addressIcon.snp.centerY)
+        }
+        line2.snp.makeConstraints { (make) in
+            make.left.equalTo(self.snp.left)
+            make.right.equalTo(self.snp.right)
+            make.bottom.equalTo(self.snp.bottom)
+            make.height.equalTo(0.5)
         }
         
         
