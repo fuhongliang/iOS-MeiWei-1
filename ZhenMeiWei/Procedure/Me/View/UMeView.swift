@@ -232,6 +232,7 @@ class UMeView: BaseView {
             $0.left.equalToSuperview()
             $0.right.equalToSuperview()
             $0.bottom.equalToSuperview()
+            $0.height.equalTo(100)
         }
     }
 }
