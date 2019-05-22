@@ -16,14 +16,16 @@ class UMeServicesCell: BaseView {
     
     func configUI(name:String,url:String) {
     
+
         //图标
         layerView = UIImageView()
         layerView.image = UIImage.init(named: url)
         addSubview(layerView)
         layerView.snp.makeConstraints{
             $0.centerX.equalToSuperview()
-            $0.width.equalTo(28)
-            $0.height.equalTo(28)
+            $0.width.equalTo(35)
+            $0.height.equalTo(35)
+            $0.top.equalToSuperview()
         }
         
         //服务名称
