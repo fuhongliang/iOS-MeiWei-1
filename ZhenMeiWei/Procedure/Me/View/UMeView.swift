@@ -30,6 +30,7 @@ class UMeView: BaseView {
     var settings = UMeServicesCell()
     
     var buttomView = UIImageView()
+ 
     
     func configUI() {
         //设置背景为灰色
@@ -110,36 +111,37 @@ class UMeView: BaseView {
         addSubview(address)
 
         address.snp.makeConstraints{
-            $0.top.equalTo(labelService.snp.bottom).offset(35)
+           $0.top.equalTo(labelService.snp.bottom).offset(35)
             $0.width.equalTo(screenWidth/3)
             $0.height.equalTo(80)
         }
-
-
+        
+        
+        
         //我的代金券
         myVouchers = UMeServicesCell()
         myVouchers.configUI(name: "我的代金券", url: "center_ic_djq")
         addSubview(myVouchers)
-        
+
         myVouchers.snp.makeConstraints{
             $0.top.equalTo(labelService.snp.bottom).offset(35)
             $0.centerX.equalToSuperview()
             $0.width.equalTo(screenWidth/3)
          $0.height.equalTo(80)
-            
+
         }
-        
+
         //我的收藏
         myCollection = UMeServicesCell()
         myCollection.configUI(name: "我的收藏", url: "center_ic_shouc")
         addSubview(myCollection)
-        
+
         myCollection.snp.makeConstraints{
             $0.top.equalTo(labelService.snp.bottom).offset(35)
             $0.right.equalToSuperview()
             $0.width.equalTo(screenWidth/3)
             $0.height.equalTo(80)
-            
+
         }
         
 //第二行
@@ -147,80 +149,80 @@ class UMeView: BaseView {
         myReviews = UMeServicesCell()
         myReviews.configUI(name: "我的评价", url: "center_ic_pingj")
         addSubview(myReviews)
-        
+
         myReviews.snp.makeConstraints{
             $0.top.equalTo(address.snp.bottom).offset(35)
             $0.width.equalTo(screenWidth/3)
             $0.height.equalTo(80)
-            
+
         }
-        
+
         //帮助与反馈
         helpAndFeedBack = UMeServicesCell()
         helpAndFeedBack.configUI(name: "帮助与反馈", url: "center_ic_bzfk")
         addSubview(helpAndFeedBack)
-        
+
         helpAndFeedBack.snp.makeConstraints{
             $0.top.equalTo(address.snp.bottom).offset(35)
             $0.centerX.equalToSuperview()
             $0.width.equalTo(screenWidth/3)
             $0.height.equalTo(80)
-            
+
         }
-        
+
         //服务咨询
         serviceAsk = UMeServicesCell()
         serviceAsk.configUI(name: "服务咨询", url: "center_ic_kefzx")
         addSubview(serviceAsk)
-        
+
         serviceAsk.snp.makeConstraints{
             $0.top.equalTo(address.snp.bottom).offset(35)
             $0.right.equalToSuperview()
             $0.width.equalTo(screenWidth/3)
             $0.height.equalTo(80)
-            
+
         }
-        
-        
+
+
 //第三行
         //商家入驻
         shopJoin = UMeServicesCell()
         shopJoin.configUI(name: "商家入驻", url: "center_ic_sjirz")
         addSubview(shopJoin)
-        
+
         shopJoin.snp.makeConstraints{
             $0.top.equalTo(myReviews.snp.bottom).offset(35)
             $0.width.equalTo(screenWidth/3)
             $0.height.equalTo(80)
-            
+
         }
-        
+
         //骑手入驻
         deliveryJoin = UMeServicesCell()
         deliveryJoin.configUI(name: "骑手入驻", url: "center_ic_qsrz")
         addSubview(deliveryJoin)
-        
+
         deliveryJoin.snp.makeConstraints{
             $0.top.equalTo(myReviews.snp.bottom).offset(35)
             $0.centerX.equalToSuperview()
             $0.width.equalTo(screenWidth/3)
             $0.height.equalTo(80)
-            
+
         }
-        
+
         //设置
         settings = UMeServicesCell()
         settings.configUI(name: "设置", url: "center_ic_sz")
         addSubview(settings)
-        
+
         settings.snp.makeConstraints{
             $0.top.equalTo(myReviews.snp.bottom).offset(35)
             $0.right.equalToSuperview()
             $0.width.equalTo(screenWidth/3)
             $0.height.equalTo(80)
         }
-        
-        
+
+
         //底部灰色
         buttomView = UIImageView()
         buttomView.backgroundColor = UIColor.hex(hexString: "#F5F5F5")
