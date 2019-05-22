@@ -49,6 +49,16 @@
 		04A0DB0822940B9F005F02F3 /* UIScrollView+ParallaxHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A0DB0522940B9F005F02F3 /* UIScrollView+ParallaxHeader.swift */; };
 		04A0DB0B22940C4F005F02F3 /* UMeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A0DB0922940C4F005F02F3 /* UMeView.swift */; };
 		04A0DB0C22940C4F005F02F3 /* UMineHead.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A0DB0A22940C4F005F02F3 /* UMineHead.swift */; };
+		04A0DB0F2294EC28005F02F3 /* WaitCommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A0DB0D2294EC28005F02F3 /* WaitCommentCell.swift */; };
+		04A0DB102294EC28005F02F3 /* WaitCommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04A0DB0E2294EC28005F02F3 /* WaitCommentCell.xib */; };
+		04A0DB1422953529005F02F3 /* BorderColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A0DB1322953529005F02F3 /* BorderColorExtension.swift */; };
+		04A0DB17229541DA005F02F3 /* OrderDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A0DB16229541DA005F02F3 /* OrderDetailViewController.swift */; };
+		04A0DB1922954335005F02F3 /* OrderDetailGoodsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A0DB1822954335005F02F3 /* OrderDetailGoodsView.swift */; };
+		04A0DB1B22954361005F02F3 /* OrderDetailGoodsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04A0DB1A22954361005F02F3 /* OrderDetailGoodsView.xib */; };
+		04A0DB1D229543A0005F02F3 /* DistributionInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A0DB1C229543A0005F02F3 /* DistributionInfoView.swift */; };
+		04A0DB1F229543B4005F02F3 /* DistributionInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04A0DB1E229543B4005F02F3 /* DistributionInfoView.xib */; };
+		04A0DB212295440D005F02F3 /* OrderInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A0DB202295440D005F02F3 /* OrderInfoView.swift */; };
+		04A0DB2322954428005F02F3 /* OrderInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04A0DB2222954428005F02F3 /* OrderInfoView.xib */; };
 		04F5265E228D3E940019417D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F5265D228D3E940019417D /* AppDelegate.swift */; };
 		04F52663228D3E940019417D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04F52661228D3E940019417D /* Main.storyboard */; };
 		04F52665228D3E950019417D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04F52664228D3E950019417D /* Assets.xcassets */; };
@@ -109,6 +119,16 @@
 		04A0DB0522940B9F005F02F3 /* UIScrollView+ParallaxHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+ParallaxHeader.swift"; sourceTree = "<group>"; };
 		04A0DB0922940C4F005F02F3 /* UMeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UMeView.swift; path = ZhenMeiWei/Procedure/Me/View/UMeView.swift; sourceTree = SOURCE_ROOT; };
 		04A0DB0A22940C4F005F02F3 /* UMineHead.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UMineHead.swift; path = ZhenMeiWei/Procedure/Me/View/UMineHead.swift; sourceTree = SOURCE_ROOT; };
+		04A0DB0D2294EC28005F02F3 /* WaitCommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitCommentCell.swift; sourceTree = "<group>"; };
+		04A0DB0E2294EC28005F02F3 /* WaitCommentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WaitCommentCell.xib; sourceTree = "<group>"; };
+		04A0DB1322953529005F02F3 /* BorderColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderColorExtension.swift; sourceTree = "<group>"; };
+		04A0DB16229541DA005F02F3 /* OrderDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailViewController.swift; sourceTree = "<group>"; };
+		04A0DB1822954335005F02F3 /* OrderDetailGoodsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailGoodsView.swift; sourceTree = "<group>"; };
+		04A0DB1A22954361005F02F3 /* OrderDetailGoodsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderDetailGoodsView.xib; sourceTree = "<group>"; };
+		04A0DB1C229543A0005F02F3 /* DistributionInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistributionInfoView.swift; sourceTree = "<group>"; };
+		04A0DB1E229543B4005F02F3 /* DistributionInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DistributionInfoView.xib; sourceTree = "<group>"; };
+		04A0DB202295440D005F02F3 /* OrderInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderInfoView.swift; sourceTree = "<group>"; };
+		04A0DB2222954428005F02F3 /* OrderInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderInfoView.xib; sourceTree = "<group>"; };
 		04F5265A228D3E940019417D /* ZhenMeiWei.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZhenMeiWei.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04F5265D228D3E940019417D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04F52662228D3E940019417D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -268,6 +288,7 @@
 			isa = PBXGroup;
 			children = (
 				04A0DAD522940AEE005F02F3 /* OrderViewController.swift */,
+				04A0DB16229541DA005F02F3 /* OrderDetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -275,9 +296,17 @@
 		04A0DAD622940AEE005F02F3 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				04A0DAD922940AEE005F02F3 /* OrderTopView.swift */,
 				04A0DAD722940AEE005F02F3 /* OrderTableViewCell.swift */,
 				04A0DAD822940AEE005F02F3 /* OrderTableViewCell.xib */,
-				04A0DAD922940AEE005F02F3 /* OrderTopView.swift */,
+				04A0DB0D2294EC28005F02F3 /* WaitCommentCell.swift */,
+				04A0DB0E2294EC28005F02F3 /* WaitCommentCell.xib */,
+				04A0DB1822954335005F02F3 /* OrderDetailGoodsView.swift */,
+				04A0DB1A22954361005F02F3 /* OrderDetailGoodsView.xib */,
+				04A0DB1C229543A0005F02F3 /* DistributionInfoView.swift */,
+				04A0DB1E229543B4005F02F3 /* DistributionInfoView.xib */,
+				04A0DB202295440D005F02F3 /* OrderInfoView.swift */,
+				04A0DB2222954428005F02F3 /* OrderInfoView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -315,6 +344,7 @@
 				04A0DAFA22940B92005F02F3 /* UIColorExtension.swift */,
 				04A0DAFB22940B92005F02F3 /* UIImageExtensions.swift */,
 				04A0DAFC22940B92005F02F3 /* UIViewExtension.swift */,
+				04A0DB1322953529005F02F3 /* BorderColorExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -518,10 +548,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04A0DB1B22954361005F02F3 /* OrderDetailGoodsView.xib in Resources */,
 				04A0DAE822940AEE005F02F3 /* NewAddressView.xib in Resources */,
 				04F52668228D3E950019417D /* LaunchScreen.storyboard in Resources */,
 				04A0DAEB22940AEE005F02F3 /* DiscountView.xib in Resources */,
+				04A0DB2322954428005F02F3 /* OrderInfoView.xib in Resources */,
+				04A0DB1F229543B4005F02F3 /* DistributionInfoView.xib in Resources */,
 				04F52665228D3E950019417D /* Assets.xcassets in Resources */,
+				04A0DB102294EC28005F02F3 /* WaitCommentCell.xib in Resources */,
 				04A0DAE422940AEE005F02F3 /* AddressTableViewCell.xib in Resources */,
 				04A0DAE622940AEE005F02F3 /* CurrentPositionView.xib in Resources */,
 				04A0DAF322940AEE005F02F3 /* OrderTableViewCell.xib in Resources */,
@@ -617,8 +651,10 @@
 				04A0DAF422940AEE005F02F3 /* OrderTopView.swift in Sources */,
 				04A0DAE322940AEE005F02F3 /* AddressTableViewCell.swift in Sources */,
 				04A0DAFE22940B92005F02F3 /* UIColorExtension.swift in Sources */,
+				04A0DB17229541DA005F02F3 /* OrderDetailViewController.swift in Sources */,
 				04A0DB0022940B92005F02F3 /* UIViewExtension.swift in Sources */,
 				0A5EBCCA2292BAC900AA414F /* FAPIUserServices.swift in Sources */,
+				04A0DB1422953529005F02F3 /* BorderColorExtension.swift in Sources */,
 				04A0DAEE22940AEE005F02F3 /* StoreTableViewCell.swift in Sources */,
 				04A0DAAE22940995005F02F3 /* BasicNavigationController.swift in Sources */,
 				04F526B6228EC7870019417D /* NibloadProtocol.swift in Sources */,
@@ -633,8 +669,11 @@
 				04A0DAFF22940B92005F02F3 /* UIImageExtensions.swift in Sources */,
 				04A0DB0B22940C4F005F02F3 /* UMeView.swift in Sources */,
 				04A0DAFD22940B92005F02F3 /* UIBarButtonItemExtension.swift in Sources */,
+				04A0DB212295440D005F02F3 /* OrderInfoView.swift in Sources */,
+				04A0DB1922954335005F02F3 /* OrderDetailGoodsView.swift in Sources */,
 				04A0DAE022940AEE005F02F3 /* AddNewAddressViewController.swift in Sources */,
 				0A5EBCC82292BA7D00AA414F /* FAPIToken.swift in Sources */,
+				04A0DB0F2294EC28005F02F3 /* WaitCommentCell.swift in Sources */,
 				04A0DAEA22940AEE005F02F3 /* DiscountView.swift in Sources */,
 				04A0DB0822940B9F005F02F3 /* UIScrollView+ParallaxHeader.swift in Sources */,
 				04A0DAAB22940995005F02F3 /* UBaseCollectionViewCell.swift in Sources */,
@@ -650,6 +689,7 @@
 				04A0DAAA22940995005F02F3 /* UBaseCollectionReusableView.swift in Sources */,
 				04A0DAB022940995005F02F3 /* UBaseViewController.swift in Sources */,
 				04A0DB0722940B9F005F02F3 /* ParallaxHeaderMode.swift in Sources */,
+				04A0DB1D229543A0005F02F3 /* DistributionInfoView.swift in Sources */,
 				0A5EBCC22292AEEF00AA414F /* FAPIServices.swift in Sources */,
 				04A0DAB122940995005F02F3 /* UNavigationController.swift in Sources */,
 			);

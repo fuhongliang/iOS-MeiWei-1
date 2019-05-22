@@ -9,9 +9,18 @@
 import UIKit
 
 
+protocol OrderTopViewDelegate:NSObjectProtocol {
+    
+    func clickAll()
+    func clickWait()
+    func clickRefund()
+    
+}
 //顶部滑动按钮VIEW
 class OrderTopView: UIView {
 
+    weak var delegate:OrderTopViewDelegate?
+    
     var bgView = UIView()
     
     var allOrderBtn = UIButton()
@@ -36,13 +45,13 @@ class OrderTopView: UIView {
         
         waitComment.setTitle("待评论", for: UIControl.State.normal)
         waitComment.setTitleColor(UIColor.hexColor(0x666666), for: UIControl.State.normal)
-        waitComment.titleLabel?.font = UIFont.systemFont(ofSize: 14)
+        waitComment.titleLabel?.font = UIFont.systemFont(ofSize: 15)
         waitComment.addTarget(self, action: #selector(waitOrder), for: UIControl.Event.touchUpInside)
         bgView.addSubview(waitComment)
         
         refundBtn.setTitle("退款", for: UIControl.State.normal)
         refundBtn.setTitleColor(UIColor.hexColor(0x666666), for: UIControl.State.normal)
-        refundBtn.titleLabel?.font = UIFont.systemFont(ofSize: 14)
+        refundBtn.titleLabel?.font = UIFont.systemFont(ofSize: 15)
         refundBtn.addTarget(self, action: #selector(refundOrder), for: UIControl.Event.touchUpInside)
         bgView.addSubview(refundBtn)
         
@@ -84,14 +93,41 @@ class OrderTopView: UIView {
     }
     
     @objc func allOrder() {
-        
+        bottomLine.frame = CGRect(x: 0, y: 42, width: Screen_W/3, height: 2)
+        attribiute(object: allOrderBtn, color: UIColor.hexColor(0x000000), font: 16)
+        attribiute(object: waitComment, color: UIColor.hexColor(0x666666), font: 15)
+        attribiute(object: refundBtn, color: UIColor.hexColor(0x666666), font: 15)
+        if delegate != nil{
+            delegate?.clickAll()
+        }
     }
+    
     @objc func waitOrder() {
-        
+        bottomLine.frame = CGRect(x: Screen_W/3, y: 42, width: Screen_W/3, height: 2)
+        attribiute(object: allOrderBtn, color: UIColor.hexColor(0x666666), font: 15)
+        attribiute(object: waitComment, color: UIColor.hexColor(0x000000), font: 16)
+        attribiute(object: refundBtn, color: UIColor.hexColor(0x666666), font: 15)
+        if delegate != nil{
+            delegate?.clickWait()
+        }
     }
+    
     @objc func refundOrder() {
-        
+        bottomLine.frame = CGRect(x: (Screen_W/3)*2, y: 42, width: Screen_W/3, height: 2)
+        attribiute(object: allOrderBtn, color: UIColor.hexColor(0x666666), font: 15)
+        attribiute(object: waitComment, color: UIColor.hexColor(0x666666), font: 15)
+        attribiute(object: refundBtn, color: UIColor.hexColor(0x000000), font: 16)
+        if delegate != nil{
+            delegate?.clickRefund()
+        }
     }
+    
+    //设置title字体，颜色
+    func attribiute (object:UIButton ,color:UIColor ,font:CGFloat){
+        object.setTitleColor(color, for: UIControl.State.normal)
+        object.titleLabel?.font = UIFont.systemFont(ofSize: font)
+    }
+    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

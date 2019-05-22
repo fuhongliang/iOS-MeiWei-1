@@ -326,7 +326,6 @@ class HomeViewController: UIViewController ,NibloadProtocol,LLCycleScrollViewDel
     
     @objc func click(){
         let vc = ChooseAddressViewController()
-        vc.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(vc, animated: true)
         
     }

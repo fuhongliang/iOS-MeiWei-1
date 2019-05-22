@@ -33,7 +33,7 @@ class ShoppingCartViewController: UIViewController ,UITableViewDelegate,UITableV
         mainTableview.snp.makeConstraints { (make) in
             make.left.equalTo(view.snp.left)
             make.right.equalTo(view.snp.right)
-            make.top.equalTo(view.snp.top)
+            make.top.equalTo(view.snp.top).offset(ViewStart_Y)
             make.bottom.equalTo(view.snp.bottom)
         }
         

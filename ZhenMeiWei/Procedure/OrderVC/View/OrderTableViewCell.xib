@@ -65,16 +65,17 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¥48" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SfQ-LW-HXX">
-                                        <rect key="frame" x="255" y="58" width="27" height="17"/>
+                                        <rect key="frame" x="248" y="58" width="27" height="17"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YwT-H9-icQ">
-                                        <rect key="frame" x="215" y="91" width="75" height="30"/>
+                                        <rect key="frame" x="199" y="91" width="75" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="75" id="95f-Ja-SJj"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <state key="normal" title="再来一单">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
@@ -82,10 +83,13 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                 <integer key="value" value="2"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.BorderWidth" value="YES"/>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="layer.BorderColorFromUIColor">
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                <real key="value" value="0.5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColorFromUIColor">
                                                 <color key="value" red="0.87058823529411766" green="0.87058823529411766" blue="0.87058823529411766" alpha="1" colorSpace="calibratedRGB"/>
                                             </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.MasksToBounds" value="YES"/>
                                         </userDefinedRuntimeAttributes>
                                     </button>
                                 </subviews>
@@ -96,8 +100,8 @@
                                     <constraint firstItem="SfQ-LW-HXX" firstAttribute="centerY" secondItem="jlA-Z8-V1y" secondAttribute="centerY" id="2sk-u3-kyh"/>
                                     <constraint firstItem="jlA-Z8-V1y" firstAttribute="top" secondItem="TBW-F3-XiA" secondAttribute="bottom" constant="7.5" id="Aar-qN-Lyt"/>
                                     <constraint firstAttribute="bottom" secondItem="YwT-H9-icQ" secondAttribute="bottom" constant="16.5" id="BX1-k1-nxt"/>
-                                    <constraint firstAttribute="trailing" secondItem="SfQ-LW-HXX" secondAttribute="trailing" constant="8" id="Gbi-Hj-041"/>
-                                    <constraint firstAttribute="trailing" secondItem="YwT-H9-icQ" secondAttribute="trailing" id="Ja3-LR-F6H"/>
+                                    <constraint firstAttribute="trailing" secondItem="SfQ-LW-HXX" secondAttribute="trailing" constant="15" id="Gbi-Hj-041"/>
+                                    <constraint firstAttribute="trailing" secondItem="YwT-H9-icQ" secondAttribute="trailing" constant="16" id="Ja3-LR-F6H"/>
                                     <constraint firstItem="TBW-F3-XiA" firstAttribute="top" secondItem="m1y-76-OXD" secondAttribute="bottom" constant="10" id="XNL-jR-Blq"/>
                                     <constraint firstItem="YwT-H9-icQ" firstAttribute="top" secondItem="SfQ-LW-HXX" secondAttribute="bottom" constant="16" id="bd5-an-iJd"/>
                                     <constraint firstAttribute="trailing" secondItem="NMY-rh-1PC" secondAttribute="trailing" constant="15" id="jBR-YQ-ccd"/>

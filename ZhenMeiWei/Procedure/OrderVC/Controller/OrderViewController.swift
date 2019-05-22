@@ -8,7 +8,7 @@
 
 import UIKit
 
-class OrderViewController: UIViewController ,UITableViewDelegate,UITableViewDataSource,UIScrollViewDelegate{
+class OrderViewController: UIViewController ,UITableViewDelegate,UITableViewDataSource,UIScrollViewDelegate,OrderTopViewDelegate{
     
     var topview = OrderTopView()
     
@@ -27,6 +27,7 @@ class OrderViewController: UIViewController ,UITableViewDelegate,UITableViewData
     }
     
     func setupUI() {
+        topview.delegate = self
         view.addSubview(topview)
         topview.snp.makeConstraints { (make) in
             make.left.equalTo(view.snp.left)
@@ -37,8 +38,9 @@ class OrderViewController: UIViewController ,UITableViewDelegate,UITableViewData
         
         tableScrollView.contentSize = CGSize(width: Screen_W*3, height: Screen_H-ViewStart_Y-44-kTabbarH)
         tableScrollView.bounces = true
-        tableScrollView.isPagingEnabled = true
         tableScrollView.delegate = self
+        tableScrollView.isPagingEnabled = true
+        tableScrollView.showsHorizontalScrollIndicator = false
         tableScrollView.backgroundColor = UIColor.white
         view.addSubview(tableScrollView)
         tableScrollView.snp.makeConstraints { (make) in
@@ -59,11 +61,17 @@ class OrderViewController: UIViewController ,UITableViewDelegate,UITableViewData
         waitTableview.backgroundColor = UIColor.hexColor(0xf5f5f5)
         waitTableview.delegate = self
         waitTableview.dataSource = self
+        waitTableview.rowHeight = UITableView.automaticDimension
+        waitTableview.separatorStyle = UITableViewCell.SeparatorStyle.none
+        waitTableview.register(UINib.init(nibName: "WaitCommentCell", bundle: Bundle.main), forCellReuseIdentifier: "WaitCommentCell")
         tableScrollView.addSubview(waitTableview)
 
         refundTableview.backgroundColor = UIColor.hexColor(0xf5f5f5)
         refundTableview.delegate = self
         refundTableview.dataSource = self
+        refundTableview.rowHeight = UITableView.automaticDimension
+        refundTableview.separatorStyle = UITableViewCell.SeparatorStyle.none
+        refundTableview.register(UINib.init(nibName: "WaitCommentCell", bundle: Bundle.main), forCellReuseIdentifier: "WaitCommentCell")
         tableScrollView.addSubview(refundTableview)
 
         allTableview.snp.makeConstraints { (make) in
@@ -91,9 +99,9 @@ class OrderViewController: UIViewController ,UITableViewDelegate,UITableViewData
         if tableView == allTableview{
             return 5
         }else if tableView == waitTableview{
-            return 0
+            return 10
         }else{
-            return 0
+            return 10
         }
     }
     
@@ -101,7 +109,65 @@ class OrderViewController: UIViewController ,UITableViewDelegate,UITableViewData
         if tableView == allTableview{
             let cell = tableView.dequeueReusableCell(withIdentifier: "OrderTableViewCell", for: indexPath) as! OrderTableViewCell
             return cell
+        }else if tableView == waitTableview{
+            let cell = tableView.dequeueReusableCell(withIdentifier: "WaitCommentCell", for: indexPath) as! WaitCommentCell
+            return cell
+        }else{
+            let cell = tableView.dequeueReusableCell(withIdentifier: "WaitCommentCell", for: indexPath) as! WaitCommentCell
+            cell.setDataWithModel(data: ["state":"已退款"])
+            return cell
+            
         }
-        return UITableViewCell()
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let detail = OrderDetailViewController()
+        self.navigationController?.pushViewController(detail, animated: true)
+        
+    }
+    
+    //全部订单点击方法
+    func clickAll() {
+        UIView.animate(withDuration: 0.3) {
+            self.tableScrollView.contentOffset = CGPoint(x: 0, y: 0)
+        }
+    }
+    //待评价订单点击方法
+    func clickWait() {
+        UIView.animate(withDuration: 0.3) {
+            self.tableScrollView.contentOffset = CGPoint(x: 1*Screen_W, y: 0)
+        }
+    }
+    //退款订单点击方法
+    func clickRefund() {
+        UIView.animate(withDuration: 0.3) {
+            self.tableScrollView.contentOffset = CGPoint(x: 2*Screen_W, y: 0)
+        }
+    }
+
+    //scrollview  Delegate
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        if scrollView == tableScrollView{
+            let a = scrollView.contentOffset.x/Screen_W
+            print(a)
+            if a == 0{
+                self.topview.bottomLine.frame = CGRect(x: 0, y: 42, width: Screen_W/3, height: 2)
+                topview.attribiute(object: topview.allOrderBtn, color: UIColor.hexColor(0x000000), font: 16)
+                topview.attribiute(object: topview.waitComment, color: UIColor.hexColor(0x666666), font: 15)
+                topview.attribiute(object: topview.refundBtn, color: UIColor.hexColor(0x666666), font: 15)
+            }else if a == 1{
+                self.topview.bottomLine.frame = CGRect(x: Screen_W/3, y: 42, width: Screen_W/3, height: 2)
+                topview.attribiute(object: topview.allOrderBtn, color: UIColor.hexColor(0x666666), font: 15)
+                topview.attribiute(object: topview.waitComment, color: UIColor.hexColor(0x000000), font: 16)
+                topview.attribiute(object: topview.refundBtn, color: UIColor.hexColor(0x666666), font: 15)
+            }else{
+                self.topview.bottomLine.frame = CGRect(x: (Screen_W/3)*2, y: 42, width: Screen_W/3, height: 2)
+                topview.attribiute(object: topview.allOrderBtn, color: UIColor.hexColor(0x666666), font: 15)
+                topview.attribiute(object: topview.waitComment, color: UIColor.hexColor(0x666666), font: 15)
+                topview.attribiute(object: topview.refundBtn, color: UIColor.hexColor(0x000000), font: 16)
+            }
+        }
+    }
+    
 }
