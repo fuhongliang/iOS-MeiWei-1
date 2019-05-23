@@ -22,7 +22,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A24-oq-2Yg">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="91.5"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="he8-1a-U5m">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GirlImage" translatesAutoresizingMaskIntoConstraints="NO" id="he8-1a-U5m">
                                 <rect key="frame" x="15" y="15" width="62" height="61.5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="61.5" id="4l3-mV-fXl"/>
@@ -163,6 +163,7 @@
         </tableViewCell>
     </objects>
     <resources>
+        <image name="GirlImage" width="120" height="120"/>
         <image name="icon_xingxing" width="11.5" height="11"/>
     </resources>
 </document>

@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		041EBAA822964E2700116938 /* OrderDetailRiderHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041EBAA722964E2700116938 /* OrderDetailRiderHeaderView.swift */; };
+		041EBAAA22964E9600116938 /* OrderDetailRiderHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 041EBAA922964E9600116938 /* OrderDetailRiderHeaderView.xib */; };
+		041EBAAF2296733000116938 /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041EBAAE2296733000116938 /* StoreViewController.swift */; };
+		041EBAB12296734F00116938 /* StoreHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041EBAB02296734F00116938 /* StoreHeaderView.swift */; };
+		041EBAB3229674D800116938 /* StoreHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 041EBAB2229674D800116938 /* StoreHeaderView.xib */; };
+		041EBAB52296879800116938 /* StoreGoodsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041EBAB42296879800116938 /* StoreGoodsView.swift */; };
+		041EBAB82296941200116938 /* GoodsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041EBAB62296941200116938 /* GoodsTableViewCell.swift */; };
+		041EBAB92296941200116938 /* GoodsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 041EBAB72296941200116938 /* GoodsTableViewCell.xib */; };
 		04A0DAA922940995005F02F3 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A0DA9F22940995005F02F3 /* BaseView.swift */; };
 		04A0DAAA22940995005F02F3 /* UBaseCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A0DAA022940995005F02F3 /* UBaseCollectionReusableView.swift */; };
 		04A0DAAB22940995005F02F3 /* UBaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A0DAA122940995005F02F3 /* UBaseCollectionViewCell.swift */; };
@@ -66,6 +74,8 @@
 		04F5268D228D5A260019417D /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F5268C228D5A260019417D /* Common.swift */; };
 		04F5268F228D5A2C0019417D /* UIColor+HexColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F5268E228D5A2C0019417D /* UIColor+HexColor.swift */; };
 		04F526B6228EC7870019417D /* NibloadProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F526B5228EC7870019417D /* NibloadProtocol.swift */; };
+		04F9CA0122962D1100E7440E /* OrderDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F9CA0022962D1100E7440E /* OrderDetailHeaderView.swift */; };
+		04F9CA0322962D6F00E7440E /* OrderDetailHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04F9CA0222962D6F00E7440E /* OrderDetailHeaderView.xib */; };
 		0A5EBCC22292AEEF00AA414F /* FAPIServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5EBCC12292AEEF00AA414F /* FAPIServices.swift */; };
 		0A5EBCC42292AFB400AA414F /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5EBCC32292AFB400AA414F /* Global.swift */; };
 		0A5EBCC62292B2E600AA414F /* FAPIResponseModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5EBCC52292B2E600AA414F /* FAPIResponseModels.swift */; };
@@ -77,6 +87,14 @@
 
 /* Begin PBXFileReference section */
 		01E9C21BCA49D8998814A08A /* Pods_ZhenMeiWeiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZhenMeiWeiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		041EBAA722964E2700116938 /* OrderDetailRiderHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailRiderHeaderView.swift; sourceTree = "<group>"; };
+		041EBAA922964E9600116938 /* OrderDetailRiderHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderDetailRiderHeaderView.xib; sourceTree = "<group>"; };
+		041EBAAE2296733000116938 /* StoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreViewController.swift; sourceTree = "<group>"; };
+		041EBAB02296734F00116938 /* StoreHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreHeaderView.swift; sourceTree = "<group>"; };
+		041EBAB2229674D800116938 /* StoreHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoreHeaderView.xib; sourceTree = "<group>"; };
+		041EBAB42296879800116938 /* StoreGoodsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreGoodsView.swift; sourceTree = "<group>"; };
+		041EBAB62296941200116938 /* GoodsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodsTableViewCell.swift; sourceTree = "<group>"; };
+		041EBAB72296941200116938 /* GoodsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GoodsTableViewCell.xib; sourceTree = "<group>"; };
 		04A0DA9F22940995005F02F3 /* BaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		04A0DAA022940995005F02F3 /* UBaseCollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UBaseCollectionReusableView.swift; sourceTree = "<group>"; };
 		04A0DAA122940995005F02F3 /* UBaseCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UBaseCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -138,6 +156,8 @@
 		04F5268C228D5A260019417D /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		04F5268E228D5A2C0019417D /* UIColor+HexColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+HexColor.swift"; sourceTree = "<group>"; };
 		04F526B5228EC7870019417D /* NibloadProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibloadProtocol.swift; sourceTree = "<group>"; };
+		04F9CA0022962D1100E7440E /* OrderDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailHeaderView.swift; sourceTree = "<group>"; };
+		04F9CA0222962D6F00E7440E /* OrderDetailHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderDetailHeaderView.xib; sourceTree = "<group>"; };
 		0A5EBCC12292AEEF00AA414F /* FAPIServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAPIServices.swift; sourceTree = "<group>"; };
 		0A5EBCC32292AFB400AA414F /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		0A5EBCC52292B2E600AA414F /* FAPIResponseModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAPIResponseModels.swift; sourceTree = "<group>"; };
@@ -162,6 +182,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		041EBAAB229672EE00116938 /* StoreControllerView */ = {
+			isa = PBXGroup;
+			children = (
+				041EBAAD2296730D00116938 /* View */,
+				041EBAAC2296730300116938 /* Controller */,
+			);
+			path = StoreControllerView;
+			sourceTree = "<group>";
+		};
+		041EBAAC2296730300116938 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				041EBAAE2296733000116938 /* StoreViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		041EBAAD2296730D00116938 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				041EBAB02296734F00116938 /* StoreHeaderView.swift */,
+				041EBAB2229674D800116938 /* StoreHeaderView.xib */,
+				041EBAB42296879800116938 /* StoreGoodsView.swift */,
+				041EBAB62296941200116938 /* GoodsTableViewCell.swift */,
+				041EBAB72296941200116938 /* GoodsTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		04A0DA9E22940995005F02F3 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -187,6 +236,7 @@
 		04A0DAB922940AEE005F02F3 /* Procedure */ = {
 			isa = PBXGroup;
 			children = (
+				041EBAAB229672EE00116938 /* StoreControllerView */,
 				04A0DABA22940AEE005F02F3 /* AddressVC */,
 				04A0DAC622940AEE005F02F3 /* HomeVC */,
 				04A0DAD022940AEE005F02F3 /* Me */,
@@ -307,6 +357,10 @@
 				04A0DB1E229543B4005F02F3 /* DistributionInfoView.xib */,
 				04A0DB202295440D005F02F3 /* OrderInfoView.swift */,
 				04A0DB2222954428005F02F3 /* OrderInfoView.xib */,
+				04F9CA0022962D1100E7440E /* OrderDetailHeaderView.swift */,
+				04F9CA0222962D6F00E7440E /* OrderDetailHeaderView.xib */,
+				041EBAA722964E2700116938 /* OrderDetailRiderHeaderView.swift */,
+				041EBAA922964E9600116938 /* OrderDetailRiderHeaderView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -552,17 +606,21 @@
 				04A0DAE822940AEE005F02F3 /* NewAddressView.xib in Resources */,
 				04F52668228D3E950019417D /* LaunchScreen.storyboard in Resources */,
 				04A0DAEB22940AEE005F02F3 /* DiscountView.xib in Resources */,
+				041EBAAA22964E9600116938 /* OrderDetailRiderHeaderView.xib in Resources */,
 				04A0DB2322954428005F02F3 /* OrderInfoView.xib in Resources */,
 				04A0DB1F229543B4005F02F3 /* DistributionInfoView.xib in Resources */,
 				04F52665228D3E950019417D /* Assets.xcassets in Resources */,
 				04A0DB102294EC28005F02F3 /* WaitCommentCell.xib in Resources */,
+				041EBAB3229674D800116938 /* StoreHeaderView.xib in Resources */,
 				04A0DAE422940AEE005F02F3 /* AddressTableViewCell.xib in Resources */,
 				04A0DAE622940AEE005F02F3 /* CurrentPositionView.xib in Resources */,
 				04A0DAF322940AEE005F02F3 /* OrderTableViewCell.xib in Resources */,
 				04F52663228D3E940019417D /* Main.storyboard in Resources */,
 				04A0DAED22940AEE005F02F3 /* SectionHeaderView.xib in Resources */,
+				04F9CA0322962D6F00E7440E /* OrderDetailHeaderView.xib in Resources */,
 				04A0DAF722940AEE005F02F3 /* ShoppingCartCell.xib in Resources */,
 				04A0DAEF22940AEE005F02F3 /* StoreTableViewCell.xib in Resources */,
+				041EBAB92296941200116938 /* GoodsTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -644,8 +702,10 @@
 			files = (
 				04A0DAA922940995005F02F3 /* BaseView.swift in Sources */,
 				0A5EBCC62292B2E600AA414F /* FAPIResponseModels.swift in Sources */,
+				041EBAB82296941200116938 /* GoodsTableViewCell.swift in Sources */,
 				04A0DAE722940AEE005F02F3 /* NewAddressView.swift in Sources */,
 				04A0DAAD22940995005F02F3 /* UMeServicesCell.swift in Sources */,
+				041EBAA822964E2700116938 /* OrderDetailRiderHeaderView.swift in Sources */,
 				04A0DAAC22940995005F02F3 /* UBaseTableViewCell.swift in Sources */,
 				0A5EBCCC2292BB3800AA414F /* FAPIUser.swift in Sources */,
 				04A0DAF422940AEE005F02F3 /* OrderTopView.swift in Sources */,
@@ -656,12 +716,14 @@
 				0A5EBCCA2292BAC900AA414F /* FAPIUserServices.swift in Sources */,
 				04A0DB1422953529005F02F3 /* BorderColorExtension.swift in Sources */,
 				04A0DAEE22940AEE005F02F3 /* StoreTableViewCell.swift in Sources */,
+				041EBAAF2296733000116938 /* StoreViewController.swift in Sources */,
 				04A0DAAE22940995005F02F3 /* BasicNavigationController.swift in Sources */,
 				04F526B6228EC7870019417D /* NibloadProtocol.swift in Sources */,
 				04A0DAF022940AEE005F02F3 /* MeViewController.swift in Sources */,
 				04A0DAE222940AEE005F02F3 /* AddressHeaderView.swift in Sources */,
 				04A0DAAF22940995005F02F3 /* TabBarViewController.swift in Sources */,
 				04A0DAF122940AEE005F02F3 /* OrderViewController.swift in Sources */,
+				04F9CA0122962D1100E7440E /* OrderDetailHeaderView.swift in Sources */,
 				0A5EBCC42292AFB400AA414F /* Global.swift in Sources */,
 				04A0DAE922940AEE005F02F3 /* HomeViewController.swift in Sources */,
 				04A0DAF622940AEE005F02F3 /* ShoppingCartCell.swift in Sources */,
@@ -673,7 +735,9 @@
 				04A0DB1922954335005F02F3 /* OrderDetailGoodsView.swift in Sources */,
 				04A0DAE022940AEE005F02F3 /* AddNewAddressViewController.swift in Sources */,
 				0A5EBCC82292BA7D00AA414F /* FAPIToken.swift in Sources */,
+				041EBAB52296879800116938 /* StoreGoodsView.swift in Sources */,
 				04A0DB0F2294EC28005F02F3 /* WaitCommentCell.swift in Sources */,
+				041EBAB12296734F00116938 /* StoreHeaderView.swift in Sources */,
 				04A0DAEA22940AEE005F02F3 /* DiscountView.swift in Sources */,
 				04A0DB0822940B9F005F02F3 /* UIScrollView+ParallaxHeader.swift in Sources */,
 				04A0DAAB22940995005F02F3 /* UBaseCollectionViewCell.swift in Sources */,

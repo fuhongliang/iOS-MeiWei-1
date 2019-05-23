@@ -8,15 +8,26 @@
 
 import UIKit
 
+
+protocol OrderDetailGoodsViewDelegate:NSObjectProtocol {
+    func jumpStore()
+}
 /**
     订单详情页面，购买的商品信息view
  */
 class OrderDetailGoodsView: UIView ,NibloadProtocol{
 
+    weak var delegate:OrderDetailGoodsViewDelegate?
+    
     var lastView = UIView()
     
     @IBOutlet weak var goodsBgView: UIView!
     
+    @IBAction func goStore(_ sender: Any) {
+        if delegate != nil{
+            delegate?.jumpStore()
+        }
+    }
     func setDataWithModel(arr:NSArray) {
         for i in 0..<arr.count{
             let bgview:UIView = UIView()

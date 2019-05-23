@@ -271,17 +271,16 @@ class HomeViewController: UIViewController ,NibloadProtocol,LLCycleScrollViewDel
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 10
     }
-
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: "StoreTableViewCell", for: indexPath) as! StoreTableViewCell
-
         return cell
-        
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let store = StoreViewController()
+        self.navigationController?.pushViewController(store, animated: true)
     }
     
     func comment() {
@@ -324,12 +323,14 @@ class HomeViewController: UIViewController ,NibloadProtocol,LLCycleScrollViewDel
         sectionView.mostGoodsCommetsBtn.titleLabel?.font = arr[3] as? UIFont
     }
     
+    //选择位置
     @objc func click(){
         let vc = ChooseAddressViewController()
         self.navigationController?.pushViewController(vc, animated: true)
         
     }
     
+    //购物车
     @objc func goMessage() {
         let vc = ShoppingCartViewController()
         self.navigationController?.pushViewController(vc, animated: true)

@@ -25,6 +25,9 @@
                             <state key="normal" title="水果先生">
                                 <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
+                            <connections>
+                                <action selector="goStore:" destination="iN0-l3-epB" eventType="touchUpInside" id="Ham-0g-CBn"/>
+                            </connections>
                         </button>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="order_ic_xz1" translatesAutoresizingMaskIntoConstraints="NO" id="W00-wC-sMU">
                             <rect key="frame" x="93" y="26.5" width="5" height="8"/>
