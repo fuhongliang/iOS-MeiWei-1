@@ -55,7 +55,8 @@ class ShoppingCartViewController: UIViewController ,UITableViewDelegate,UITableV
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ShoppingCartCell", for: indexPath) as! ShoppingCartCell
-        cell .setDataWithModel(arr: ["111"])
+        cell.setDataWithModel(arr: ["111"])
         return cell
     }
+
 }

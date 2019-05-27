@@ -64,7 +64,6 @@ class OrderTopView: UIView {
             make.top.equalTo(self.snp.top)
             make.bottom.equalTo(self.snp.bottom)
         }
-        
         allOrderBtn.snp.makeConstraints { (make) in
             make.left.equalTo(bgView.snp.left)
             make.top.equalTo(bgView.snp.top)
@@ -93,37 +92,37 @@ class OrderTopView: UIView {
     }
     
     @objc func allOrder() {
-        bottomLine.frame = CGRect(x: 0, y: 42, width: Screen_W/3, height: 2)
-        attribiute(object: allOrderBtn, color: UIColor.hexColor(0x000000), font: 16)
-        attribiute(object: waitComment, color: UIColor.hexColor(0x666666), font: 15)
-        attribiute(object: refundBtn, color: UIColor.hexColor(0x666666), font: 15)
+        bottomLine.center.x = allOrderBtn.center.x
+        setFontAndColor(object: allOrderBtn, color: UIColor.hexColor(0x000000), font: 16)
+        setFontAndColor(object: waitComment, color: UIColor.hexColor(0x666666), font: 15)
+        setFontAndColor(object: refundBtn, color: UIColor.hexColor(0x666666), font: 15)
         if delegate != nil{
             delegate?.clickAll()
         }
     }
     
     @objc func waitOrder() {
-        bottomLine.frame = CGRect(x: Screen_W/3, y: 42, width: Screen_W/3, height: 2)
-        attribiute(object: allOrderBtn, color: UIColor.hexColor(0x666666), font: 15)
-        attribiute(object: waitComment, color: UIColor.hexColor(0x000000), font: 16)
-        attribiute(object: refundBtn, color: UIColor.hexColor(0x666666), font: 15)
+        bottomLine.center.x = waitComment.center.x
+        setFontAndColor(object: allOrderBtn, color: UIColor.hexColor(0x666666), font: 15)
+        setFontAndColor(object: waitComment, color: UIColor.hexColor(0x000000), font: 16)
+        setFontAndColor(object: refundBtn, color: UIColor.hexColor(0x666666), font: 15)
         if delegate != nil{
             delegate?.clickWait()
         }
     }
     
     @objc func refundOrder() {
-        bottomLine.frame = CGRect(x: (Screen_W/3)*2, y: 42, width: Screen_W/3, height: 2)
-        attribiute(object: allOrderBtn, color: UIColor.hexColor(0x666666), font: 15)
-        attribiute(object: waitComment, color: UIColor.hexColor(0x666666), font: 15)
-        attribiute(object: refundBtn, color: UIColor.hexColor(0x000000), font: 16)
+        bottomLine.center.x = refundBtn.center.x
+        setFontAndColor(object: allOrderBtn, color: UIColor.hexColor(0x666666), font: 15)
+        setFontAndColor(object: waitComment, color: UIColor.hexColor(0x666666), font: 15)
+        setFontAndColor(object: refundBtn, color: UIColor.hexColor(0x000000), font: 16)
         if delegate != nil{
             delegate?.clickRefund()
         }
     }
     
     //设置title字体，颜色
-    func attribiute (object:UIButton ,color:UIColor ,font:CGFloat){
+    func setFontAndColor (object:UIButton ,color:UIColor ,font:CGFloat){
         object.setTitleColor(color, for: UIControl.State.normal)
         object.titleLabel?.font = UIFont.systemFont(ofSize: font)
     }

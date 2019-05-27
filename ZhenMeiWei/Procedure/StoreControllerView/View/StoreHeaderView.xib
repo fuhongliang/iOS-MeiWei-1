@@ -161,26 +161,32 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="21W-Ui-uNy">
                             <rect key="frame" x="0.0" y="257" width="375" height="390"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UJA-6R-cst">
-                                    <rect key="frame" x="25" y="3.5" width="35" height="383"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UJA-6R-cst">
+                                    <rect key="frame" x="25" y="3.5" width="37" height="383"/>
                                     <state key="normal" title="菜单">
                                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     </state>
+                                    <connections>
+                                        <action selector="clickMenu:" destination="iN0-l3-epB" eventType="touchUpInside" id="KX0-0J-Zwq"/>
+                                    </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6b5-4n-DH1">
-                                    <rect key="frame" x="112" y="178.5" width="35" height="33"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6b5-4n-DH1">
+                                    <rect key="frame" x="114" y="178" width="37" height="34"/>
                                     <state key="normal" title="评价">
                                         <color key="titleColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                     </state>
+                                    <connections>
+                                        <action selector="clickComment:" destination="iN0-l3-epB" eventType="touchUpInside" id="BXr-bi-I3d"/>
+                                    </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OGM-zW-be1">
-                                    <rect key="frame" x="199" y="178.5" width="35" height="33"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OGM-zW-be1">
+                                    <rect key="frame" x="203" y="178" width="37" height="34"/>
                                     <state key="normal" title="商家">
                                         <color key="titleColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                     </state>
+                                    <connections>
+                                        <action selector="clickBusiness:" destination="iN0-l3-epB" eventType="touchUpInside" id="Iwc-ap-00E"/>
+                                    </connections>
                                 </button>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rtg-f3-8Cg">
                                     <rect key="frame" x="0.0" y="389.5" width="375" height="0.5"/>
@@ -190,7 +196,7 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qlh-aA-pxF">
-                                    <rect key="frame" x="31.5" y="386.5" width="22" height="3"/>
+                                    <rect key="frame" x="32.5" y="386.5" width="22" height="3"/>
                                     <color key="backgroundColor" red="1" green="0.72941176470588232" blue="0.090196078431372548" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="3" id="bEb-oT-AbK"/>
@@ -245,7 +251,11 @@
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
+                <outlet property="businessBtn" destination="OGM-zW-be1" id="G7z-Mg-tWK"/>
+                <outlet property="commentBtn" destination="6b5-4n-DH1" id="K7l-tV-glT"/>
                 <outlet property="fullReduceView" destination="hye-nh-dkx" id="euY-3R-UPi"/>
+                <outlet property="lineView" destination="qlh-aA-pxF" id="GTM-zA-v5U"/>
+                <outlet property="menuBtn" destination="UJA-6R-cst" id="gSe-BW-xGF"/>
             </connections>
             <point key="canvasLocation" x="53.600000000000001" y="134.48275862068968"/>
         </view>

@@ -10,7 +10,6 @@ import UIKit
 
 class BasicNavigationController: UINavigationController ,UINavigationControllerDelegate {
 
-    
     var popDelegate:UIGestureRecognizerDelegate?
     
     override init(rootViewController: UIViewController) {

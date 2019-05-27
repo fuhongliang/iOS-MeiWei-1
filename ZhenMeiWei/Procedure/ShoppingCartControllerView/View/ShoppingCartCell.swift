@@ -11,7 +11,7 @@ import UIKit
 class ShoppingCartCell: UITableViewCell {
 
     var lastView = UIView()
-
+    
     @IBOutlet weak var goodsBgView: UIView!
     
     override func awakeFromNib() {
@@ -107,4 +107,7 @@ class ShoppingCartCell: UITableViewCell {
         }
     }
     
+    @IBAction func payment(_ sender: Any) {
+        
+    }
 }

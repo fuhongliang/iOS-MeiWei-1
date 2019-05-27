@@ -8,8 +8,23 @@
 
 import UIKit
 
+//商家主页headview
+protocol StoreHeaderViewDelegate:NSObjectProtocol {
+    func menuAction()
+    func commentAction()
+    func busineesAction()
+}
 class StoreHeaderView: UIView ,NibloadProtocol{
 
+    weak var delegate:StoreHeaderViewDelegate?
+    //菜单按钮
+    @IBOutlet weak var menuBtn: UIButton!
+    //评价按钮
+    @IBOutlet weak var commentBtn: UIButton!
+    //商家按钮
+    @IBOutlet weak var businessBtn: UIButton!
+    //滑动色块
+    @IBOutlet weak var lineView: UIView!
     var tempLab = UILabel()
     
     @IBOutlet weak var fullReduceView: UIView!
@@ -40,5 +55,36 @@ class StoreHeaderView: UIView ,NibloadProtocol{
         
     }
     
+    @IBAction func clickMenu(_ sender: Any) {
+        let arr = [UIColor.hexColor(0x000000),UIColor.hexColor(0x666666),UIColor.hexColor(0x666666)]
+        setColors(arr: arr as NSArray)
+        self.lineView.center.x = menuBtn.center.x
+        if delegate != nil{
+            delegate?.menuAction()
+        }
+    }
     
+    @IBAction func clickComment(_ sender: Any) {
+        let arr = [UIColor.hexColor(0x666666),UIColor.hexColor(0x000000),UIColor.hexColor(0x666666)]
+        setColors(arr: arr as NSArray)
+        self.lineView.center.x = commentBtn.center.x
+        if delegate != nil{
+            delegate?.commentAction()
+        }
+    }
+    
+    @IBAction func clickBusiness(_ sender: Any) {
+        let arr = [UIColor.hexColor(0x666666),UIColor.hexColor(0x666666),UIColor.hexColor(0x000000)]
+        setColors(arr: arr as NSArray)
+        self.lineView.center.x = businessBtn.center.x
+        if delegate != nil{
+            delegate?.busineesAction()
+        }
+    }
+    
+    func setColors(arr:NSArray) {
+        menuBtn.setTitleColor(arr[0] as? UIColor, for: UIControl.State.normal)
+        commentBtn.setTitleColor(arr[1] as? UIColor, for: UIControl.State.normal)
+        businessBtn.setTitleColor(arr[2] as? UIColor, for: UIControl.State.normal)
+    }
 }

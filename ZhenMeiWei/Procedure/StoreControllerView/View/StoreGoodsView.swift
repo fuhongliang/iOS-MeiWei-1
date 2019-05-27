@@ -8,6 +8,7 @@
 
 import UIKit
 
+//商家菜单view
 class StoreGoodsView: UIView ,UITableViewDelegate,UITableViewDataSource{
 
     

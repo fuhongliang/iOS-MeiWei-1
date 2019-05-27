@@ -23,9 +23,16 @@ class OrderViewController: UIViewController ,UITableViewDelegate,UITableViewData
 
         self.title = "订单"
         view.backgroundColor = UIColor.white
+        
+        let rightItem = UIBarButtonItem(title: "登录", style: UIBarButtonItem.Style.plain, target: self, action: #selector(login))
+        self.navigationItem.rightBarButtonItem = rightItem
         setupUI()
     }
     
+    @objc func login() {
+        let vc = CodeLoginController()
+        self.present(vc, animated: true, completion: nil)
+    }
     func setupUI() {
         topview.delegate = self
         view.addSubview(topview)
@@ -152,20 +159,20 @@ class OrderViewController: UIViewController ,UITableViewDelegate,UITableViewData
             let a = scrollView.contentOffset.x/Screen_W
             print(a)
             if a == 0{
-                self.topview.bottomLine.frame = CGRect(x: 0, y: 42, width: Screen_W/3, height: 2)
-                topview.attribiute(object: topview.allOrderBtn, color: UIColor.hexColor(0x000000), font: 16)
-                topview.attribiute(object: topview.waitComment, color: UIColor.hexColor(0x666666), font: 15)
-                topview.attribiute(object: topview.refundBtn, color: UIColor.hexColor(0x666666), font: 15)
+                self.topview.bottomLine.center.x = self.topview.allOrderBtn.center.x
+                topview.setFontAndColor(object: topview.allOrderBtn, color: UIColor.hexColor(0x000000), font: 16)
+                topview.setFontAndColor(object: topview.waitComment, color: UIColor.hexColor(0x666666), font: 15)
+                topview.setFontAndColor(object: topview.refundBtn, color: UIColor.hexColor(0x666666), font: 15)
             }else if a == 1{
-                self.topview.bottomLine.frame = CGRect(x: Screen_W/3, y: 42, width: Screen_W/3, height: 2)
-                topview.attribiute(object: topview.allOrderBtn, color: UIColor.hexColor(0x666666), font: 15)
-                topview.attribiute(object: topview.waitComment, color: UIColor.hexColor(0x000000), font: 16)
-                topview.attribiute(object: topview.refundBtn, color: UIColor.hexColor(0x666666), font: 15)
+                self.topview.bottomLine.center.x = self.topview.waitComment.center.x
+                topview.setFontAndColor(object: topview.allOrderBtn, color: UIColor.hexColor(0x666666), font: 15)
+                topview.setFontAndColor(object: topview.waitComment, color: UIColor.hexColor(0x000000), font: 16)
+                topview.setFontAndColor(object: topview.refundBtn, color: UIColor.hexColor(0x666666), font: 15)
             }else{
-                self.topview.bottomLine.frame = CGRect(x: (Screen_W/3)*2, y: 42, width: Screen_W/3, height: 2)
-                topview.attribiute(object: topview.allOrderBtn, color: UIColor.hexColor(0x666666), font: 15)
-                topview.attribiute(object: topview.waitComment, color: UIColor.hexColor(0x666666), font: 15)
-                topview.attribiute(object: topview.refundBtn, color: UIColor.hexColor(0x000000), font: 16)
+                self.topview.bottomLine.center.x = self.topview.refundBtn.center.x
+                topview.setFontAndColor(object: topview.allOrderBtn, color: UIColor.hexColor(0x666666), font: 15)
+                topview.setFontAndColor(object: topview.waitComment, color: UIColor.hexColor(0x666666), font: 15)
+                topview.setFontAndColor(object: topview.refundBtn, color: UIColor.hexColor(0x000000), font: 16)
             }
         }
     }

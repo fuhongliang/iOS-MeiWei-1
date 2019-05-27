@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04003396229796F0005A1FBA /* CodeLoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04003395229796F0005A1FBA /* CodeLoginController.swift */; };
+		0400339A22979733005A1FBA /* SetPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0400339922979733005A1FBA /* SetPassword.swift */; };
+		0400339C2297977F005A1FBA /* PasswordLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0400339B2297977F005A1FBA /* PasswordLoginView.swift */; };
+		0400339E22979790005A1FBA /* PasswordLoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0400339D22979790005A1FBA /* PasswordLoginView.xib */; };
+		040033A0229797C6005A1FBA /* CodeLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0400339F229797C6005A1FBA /* CodeLoginView.swift */; };
+		040033A2229797D3005A1FBA /* CodeLoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 040033A1229797D3005A1FBA /* CodeLoginView.xib */; };
+		040033A422979BBB005A1FBA /* SetPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040033A322979BBB005A1FBA /* SetPasswordView.swift */; };
+		040033A622979BC8005A1FBA /* SetPasswordView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 040033A522979BC8005A1FBA /* SetPasswordView.xib */; };
+		040033A8229B74F9005A1FBA /* SubmitOrderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040033A7229B74F9005A1FBA /* SubmitOrderController.swift */; };
+		040033AA229B7629005A1FBA /* AddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040033A9229B7629005A1FBA /* AddressView.swift */; };
+		040033AC229B7649005A1FBA /* AddressView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 040033AB229B7649005A1FBA /* AddressView.xib */; };
 		041EBAA822964E2700116938 /* OrderDetailRiderHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041EBAA722964E2700116938 /* OrderDetailRiderHeaderView.swift */; };
 		041EBAAA22964E9600116938 /* OrderDetailRiderHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 041EBAA922964E9600116938 /* OrderDetailRiderHeaderView.xib */; };
 		041EBAAF2296733000116938 /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041EBAAE2296733000116938 /* StoreViewController.swift */; };
@@ -87,6 +98,17 @@
 
 /* Begin PBXFileReference section */
 		01E9C21BCA49D8998814A08A /* Pods_ZhenMeiWeiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZhenMeiWeiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		04003395229796F0005A1FBA /* CodeLoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeLoginController.swift; sourceTree = "<group>"; };
+		0400339922979733005A1FBA /* SetPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPassword.swift; sourceTree = "<group>"; };
+		0400339B2297977F005A1FBA /* PasswordLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordLoginView.swift; sourceTree = "<group>"; };
+		0400339D22979790005A1FBA /* PasswordLoginView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PasswordLoginView.xib; sourceTree = "<group>"; };
+		0400339F229797C6005A1FBA /* CodeLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeLoginView.swift; sourceTree = "<group>"; };
+		040033A1229797D3005A1FBA /* CodeLoginView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CodeLoginView.xib; sourceTree = "<group>"; };
+		040033A322979BBB005A1FBA /* SetPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPasswordView.swift; sourceTree = "<group>"; };
+		040033A522979BC8005A1FBA /* SetPasswordView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SetPasswordView.xib; sourceTree = "<group>"; };
+		040033A7229B74F9005A1FBA /* SubmitOrderController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitOrderController.swift; sourceTree = "<group>"; };
+		040033A9229B7629005A1FBA /* AddressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressView.swift; sourceTree = "<group>"; };
+		040033AB229B7649005A1FBA /* AddressView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddressView.xib; sourceTree = "<group>"; };
 		041EBAA722964E2700116938 /* OrderDetailRiderHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailRiderHeaderView.swift; sourceTree = "<group>"; };
 		041EBAA922964E9600116938 /* OrderDetailRiderHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderDetailRiderHeaderView.xib; sourceTree = "<group>"; };
 		041EBAAE2296733000116938 /* StoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreViewController.swift; sourceTree = "<group>"; };
@@ -182,6 +204,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04003390229795A8005A1FBA /* LogIn */ = {
+			isa = PBXGroup;
+			children = (
+				04003392229795F0005A1FBA /* View */,
+				04003391229795E8005A1FBA /* Controller */,
+			);
+			path = LogIn;
+			sourceTree = "<group>";
+		};
+		04003391229795E8005A1FBA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				04003395229796F0005A1FBA /* CodeLoginController.swift */,
+				0400339922979733005A1FBA /* SetPassword.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		04003392229795F0005A1FBA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0400339B2297977F005A1FBA /* PasswordLoginView.swift */,
+				0400339D22979790005A1FBA /* PasswordLoginView.xib */,
+				0400339F229797C6005A1FBA /* CodeLoginView.swift */,
+				040033A1229797D3005A1FBA /* CodeLoginView.xib */,
+				040033A322979BBB005A1FBA /* SetPasswordView.swift */,
+				040033A522979BC8005A1FBA /* SetPasswordView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		041EBAAB229672EE00116938 /* StoreControllerView */ = {
 			isa = PBXGroup;
 			children = (
@@ -236,11 +289,12 @@
 		04A0DAB922940AEE005F02F3 /* Procedure */ = {
 			isa = PBXGroup;
 			children = (
+				04003390229795A8005A1FBA /* LogIn */,
+				04A0DAC622940AEE005F02F3 /* HomeVC */,
+				04A0DAD322940AEE005F02F3 /* OrderVC */,
+				04A0DAD022940AEE005F02F3 /* Me */,
 				041EBAAB229672EE00116938 /* StoreControllerView */,
 				04A0DABA22940AEE005F02F3 /* AddressVC */,
-				04A0DAC622940AEE005F02F3 /* HomeVC */,
-				04A0DAD022940AEE005F02F3 /* Me */,
-				04A0DAD322940AEE005F02F3 /* OrderVC */,
 				04A0DADA22940AEE005F02F3 /* ShoppingCartControllerView */,
 			);
 			path = Procedure;
@@ -339,6 +393,7 @@
 			children = (
 				04A0DAD522940AEE005F02F3 /* OrderViewController.swift */,
 				04A0DB16229541DA005F02F3 /* OrderDetailViewController.swift */,
+				040033A7229B74F9005A1FBA /* SubmitOrderController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -361,6 +416,8 @@
 				04F9CA0222962D6F00E7440E /* OrderDetailHeaderView.xib */,
 				041EBAA722964E2700116938 /* OrderDetailRiderHeaderView.swift */,
 				041EBAA922964E9600116938 /* OrderDetailRiderHeaderView.xib */,
+				040033A9229B7629005A1FBA /* AddressView.swift */,
+				040033AB229B7649005A1FBA /* AddressView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -604,13 +661,16 @@
 			files = (
 				04A0DB1B22954361005F02F3 /* OrderDetailGoodsView.xib in Resources */,
 				04A0DAE822940AEE005F02F3 /* NewAddressView.xib in Resources */,
+				040033A622979BC8005A1FBA /* SetPasswordView.xib in Resources */,
 				04F52668228D3E950019417D /* LaunchScreen.storyboard in Resources */,
 				04A0DAEB22940AEE005F02F3 /* DiscountView.xib in Resources */,
 				041EBAAA22964E9600116938 /* OrderDetailRiderHeaderView.xib in Resources */,
+				040033AC229B7649005A1FBA /* AddressView.xib in Resources */,
 				04A0DB2322954428005F02F3 /* OrderInfoView.xib in Resources */,
 				04A0DB1F229543B4005F02F3 /* DistributionInfoView.xib in Resources */,
 				04F52665228D3E950019417D /* Assets.xcassets in Resources */,
 				04A0DB102294EC28005F02F3 /* WaitCommentCell.xib in Resources */,
+				040033A2229797D3005A1FBA /* CodeLoginView.xib in Resources */,
 				041EBAB3229674D800116938 /* StoreHeaderView.xib in Resources */,
 				04A0DAE422940AEE005F02F3 /* AddressTableViewCell.xib in Resources */,
 				04A0DAE622940AEE005F02F3 /* CurrentPositionView.xib in Resources */,
@@ -619,6 +679,7 @@
 				04A0DAED22940AEE005F02F3 /* SectionHeaderView.xib in Resources */,
 				04F9CA0322962D6F00E7440E /* OrderDetailHeaderView.xib in Resources */,
 				04A0DAF722940AEE005F02F3 /* ShoppingCartCell.xib in Resources */,
+				0400339E22979790005A1FBA /* PasswordLoginView.xib in Resources */,
 				04A0DAEF22940AEE005F02F3 /* StoreTableViewCell.xib in Resources */,
 				041EBAB92296941200116938 /* GoodsTableViewCell.xib in Resources */,
 			);
@@ -709,10 +770,12 @@
 				04A0DAAC22940995005F02F3 /* UBaseTableViewCell.swift in Sources */,
 				0A5EBCCC2292BB3800AA414F /* FAPIUser.swift in Sources */,
 				04A0DAF422940AEE005F02F3 /* OrderTopView.swift in Sources */,
+				0400339C2297977F005A1FBA /* PasswordLoginView.swift in Sources */,
 				04A0DAE322940AEE005F02F3 /* AddressTableViewCell.swift in Sources */,
 				04A0DAFE22940B92005F02F3 /* UIColorExtension.swift in Sources */,
 				04A0DB17229541DA005F02F3 /* OrderDetailViewController.swift in Sources */,
 				04A0DB0022940B92005F02F3 /* UIViewExtension.swift in Sources */,
+				040033AA229B7629005A1FBA /* AddressView.swift in Sources */,
 				0A5EBCCA2292BAC900AA414F /* FAPIUserServices.swift in Sources */,
 				04A0DB1422953529005F02F3 /* BorderColorExtension.swift in Sources */,
 				04A0DAEE22940AEE005F02F3 /* StoreTableViewCell.swift in Sources */,
@@ -723,12 +786,14 @@
 				04A0DAE222940AEE005F02F3 /* AddressHeaderView.swift in Sources */,
 				04A0DAAF22940995005F02F3 /* TabBarViewController.swift in Sources */,
 				04A0DAF122940AEE005F02F3 /* OrderViewController.swift in Sources */,
+				040033A8229B74F9005A1FBA /* SubmitOrderController.swift in Sources */,
 				04F9CA0122962D1100E7440E /* OrderDetailHeaderView.swift in Sources */,
 				0A5EBCC42292AFB400AA414F /* Global.swift in Sources */,
 				04A0DAE922940AEE005F02F3 /* HomeViewController.swift in Sources */,
 				04A0DAF622940AEE005F02F3 /* ShoppingCartCell.swift in Sources */,
 				04A0DAEC22940AEE005F02F3 /* SectionHeaderView.swift in Sources */,
 				04A0DAFF22940B92005F02F3 /* UIImageExtensions.swift in Sources */,
+				0400339A22979733005A1FBA /* SetPassword.swift in Sources */,
 				04A0DB0B22940C4F005F02F3 /* UMeView.swift in Sources */,
 				04A0DAFD22940B92005F02F3 /* UIBarButtonItemExtension.swift in Sources */,
 				04A0DB212295440D005F02F3 /* OrderInfoView.swift in Sources */,
@@ -737,7 +802,10 @@
 				0A5EBCC82292BA7D00AA414F /* FAPIToken.swift in Sources */,
 				041EBAB52296879800116938 /* StoreGoodsView.swift in Sources */,
 				04A0DB0F2294EC28005F02F3 /* WaitCommentCell.swift in Sources */,
+				040033A422979BBB005A1FBA /* SetPasswordView.swift in Sources */,
 				041EBAB12296734F00116938 /* StoreHeaderView.swift in Sources */,
+				04003396229796F0005A1FBA /* CodeLoginController.swift in Sources */,
+				040033A0229797C6005A1FBA /* CodeLoginView.swift in Sources */,
 				04A0DAEA22940AEE005F02F3 /* DiscountView.swift in Sources */,
 				04A0DB0822940B9F005F02F3 /* UIScrollView+ParallaxHeader.swift in Sources */,
 				04A0DAAB22940995005F02F3 /* UBaseCollectionViewCell.swift in Sources */,
