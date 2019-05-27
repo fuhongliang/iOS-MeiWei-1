@@ -18,6 +18,14 @@
 		040033A8229B74F9005A1FBA /* SubmitOrderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040033A7229B74F9005A1FBA /* SubmitOrderController.swift */; };
 		040033AA229B7629005A1FBA /* AddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040033A9229B7629005A1FBA /* AddressView.swift */; };
 		040033AC229B7649005A1FBA /* AddressView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 040033AB229B7649005A1FBA /* AddressView.xib */; };
+		0416D809229BB9D7001A3D49 /* RemarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0416D808229BB9D7001A3D49 /* RemarkView.swift */; };
+		0416D80B229BB9E7001A3D49 /* RemarkView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0416D80A229BB9E7001A3D49 /* RemarkView.xib */; };
+		0416D811229BC61F001A3D49 /* BottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0416D810229BC61F001A3D49 /* BottomView.swift */; };
+		0416D816229BE188001A3D49 /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0416D815229BE188001A3D49 /* CommentViewController.swift */; };
+		0416D818229BE242001A3D49 /* CommentForRider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0416D817229BE242001A3D49 /* CommentForRider.swift */; };
+		0416D81A229BE254001A3D49 /* CommentForStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0416D819229BE254001A3D49 /* CommentForStore.swift */; };
+		0416D81C229BE26C001A3D49 /* CommentForStore.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0416D81B229BE26C001A3D49 /* CommentForStore.xib */; };
+		0416D81E229BE27F001A3D49 /* CommentForRider.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0416D81D229BE27E001A3D49 /* CommentForRider.xib */; };
 		041EBAA822964E2700116938 /* OrderDetailRiderHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041EBAA722964E2700116938 /* OrderDetailRiderHeaderView.swift */; };
 		041EBAAA22964E9600116938 /* OrderDetailRiderHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 041EBAA922964E9600116938 /* OrderDetailRiderHeaderView.xib */; };
 		041EBAAF2296733000116938 /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041EBAAE2296733000116938 /* StoreViewController.swift */; };
@@ -109,6 +117,14 @@
 		040033A7229B74F9005A1FBA /* SubmitOrderController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitOrderController.swift; sourceTree = "<group>"; };
 		040033A9229B7629005A1FBA /* AddressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressView.swift; sourceTree = "<group>"; };
 		040033AB229B7649005A1FBA /* AddressView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddressView.xib; sourceTree = "<group>"; };
+		0416D808229BB9D7001A3D49 /* RemarkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemarkView.swift; sourceTree = "<group>"; };
+		0416D80A229BB9E7001A3D49 /* RemarkView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RemarkView.xib; sourceTree = "<group>"; };
+		0416D810229BC61F001A3D49 /* BottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomView.swift; sourceTree = "<group>"; };
+		0416D815229BE188001A3D49 /* CommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
+		0416D817229BE242001A3D49 /* CommentForRider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentForRider.swift; sourceTree = "<group>"; };
+		0416D819229BE254001A3D49 /* CommentForStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentForStore.swift; sourceTree = "<group>"; };
+		0416D81B229BE26C001A3D49 /* CommentForStore.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentForStore.xib; sourceTree = "<group>"; };
+		0416D81D229BE27E001A3D49 /* CommentForRider.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentForRider.xib; sourceTree = "<group>"; };
 		041EBAA722964E2700116938 /* OrderDetailRiderHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailRiderHeaderView.swift; sourceTree = "<group>"; };
 		041EBAA922964E9600116938 /* OrderDetailRiderHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderDetailRiderHeaderView.xib; sourceTree = "<group>"; };
 		041EBAAE2296733000116938 /* StoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreViewController.swift; sourceTree = "<group>"; };
@@ -235,6 +251,34 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		0416D812229BE149001A3D49 /* Comment */ = {
+			isa = PBXGroup;
+			children = (
+				0416D814229BE16E001A3D49 /* View */,
+				0416D813229BE162001A3D49 /* Controller */,
+			);
+			path = Comment;
+			sourceTree = "<group>";
+		};
+		0416D813229BE162001A3D49 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0416D815229BE188001A3D49 /* CommentViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0416D814229BE16E001A3D49 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0416D817229BE242001A3D49 /* CommentForRider.swift */,
+				0416D81D229BE27E001A3D49 /* CommentForRider.xib */,
+				0416D819229BE254001A3D49 /* CommentForStore.swift */,
+				0416D81B229BE26C001A3D49 /* CommentForStore.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		041EBAAB229672EE00116938 /* StoreControllerView */ = {
 			isa = PBXGroup;
 			children = (
@@ -289,6 +333,7 @@
 		04A0DAB922940AEE005F02F3 /* Procedure */ = {
 			isa = PBXGroup;
 			children = (
+				0416D812229BE149001A3D49 /* Comment */,
 				04003390229795A8005A1FBA /* LogIn */,
 				04A0DAC622940AEE005F02F3 /* HomeVC */,
 				04A0DAD322940AEE005F02F3 /* OrderVC */,
@@ -418,6 +463,9 @@
 				041EBAA922964E9600116938 /* OrderDetailRiderHeaderView.xib */,
 				040033A9229B7629005A1FBA /* AddressView.swift */,
 				040033AB229B7649005A1FBA /* AddressView.xib */,
+				0416D808229BB9D7001A3D49 /* RemarkView.swift */,
+				0416D80A229BB9E7001A3D49 /* RemarkView.xib */,
+				0416D810229BC61F001A3D49 /* BottomView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -663,9 +711,11 @@
 				04A0DAE822940AEE005F02F3 /* NewAddressView.xib in Resources */,
 				040033A622979BC8005A1FBA /* SetPasswordView.xib in Resources */,
 				04F52668228D3E950019417D /* LaunchScreen.storyboard in Resources */,
+				0416D80B229BB9E7001A3D49 /* RemarkView.xib in Resources */,
 				04A0DAEB22940AEE005F02F3 /* DiscountView.xib in Resources */,
 				041EBAAA22964E9600116938 /* OrderDetailRiderHeaderView.xib in Resources */,
 				040033AC229B7649005A1FBA /* AddressView.xib in Resources */,
+				0416D81E229BE27F001A3D49 /* CommentForRider.xib in Resources */,
 				04A0DB2322954428005F02F3 /* OrderInfoView.xib in Resources */,
 				04A0DB1F229543B4005F02F3 /* DistributionInfoView.xib in Resources */,
 				04F52665228D3E950019417D /* Assets.xcassets in Resources */,
@@ -682,6 +732,7 @@
 				0400339E22979790005A1FBA /* PasswordLoginView.xib in Resources */,
 				04A0DAEF22940AEE005F02F3 /* StoreTableViewCell.xib in Resources */,
 				041EBAB92296941200116938 /* GoodsTableViewCell.xib in Resources */,
+				0416D81C229BE26C001A3D49 /* CommentForStore.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -764,6 +815,7 @@
 				04A0DAA922940995005F02F3 /* BaseView.swift in Sources */,
 				0A5EBCC62292B2E600AA414F /* FAPIResponseModels.swift in Sources */,
 				041EBAB82296941200116938 /* GoodsTableViewCell.swift in Sources */,
+				0416D81A229BE254001A3D49 /* CommentForStore.swift in Sources */,
 				04A0DAE722940AEE005F02F3 /* NewAddressView.swift in Sources */,
 				04A0DAAD22940995005F02F3 /* UMeServicesCell.swift in Sources */,
 				041EBAA822964E2700116938 /* OrderDetailRiderHeaderView.swift in Sources */,
@@ -793,6 +845,7 @@
 				04A0DAF622940AEE005F02F3 /* ShoppingCartCell.swift in Sources */,
 				04A0DAEC22940AEE005F02F3 /* SectionHeaderView.swift in Sources */,
 				04A0DAFF22940B92005F02F3 /* UIImageExtensions.swift in Sources */,
+				0416D816229BE188001A3D49 /* CommentViewController.swift in Sources */,
 				0400339A22979733005A1FBA /* SetPassword.swift in Sources */,
 				04A0DB0B22940C4F005F02F3 /* UMeView.swift in Sources */,
 				04A0DAFD22940B92005F02F3 /* UIBarButtonItemExtension.swift in Sources */,
@@ -801,9 +854,11 @@
 				04A0DAE022940AEE005F02F3 /* AddNewAddressViewController.swift in Sources */,
 				0A5EBCC82292BA7D00AA414F /* FAPIToken.swift in Sources */,
 				041EBAB52296879800116938 /* StoreGoodsView.swift in Sources */,
+				0416D809229BB9D7001A3D49 /* RemarkView.swift in Sources */,
 				04A0DB0F2294EC28005F02F3 /* WaitCommentCell.swift in Sources */,
 				040033A422979BBB005A1FBA /* SetPasswordView.swift in Sources */,
 				041EBAB12296734F00116938 /* StoreHeaderView.swift in Sources */,
+				0416D811229BC61F001A3D49 /* BottomView.swift in Sources */,
 				04003396229796F0005A1FBA /* CodeLoginController.swift in Sources */,
 				040033A0229797C6005A1FBA /* CodeLoginView.swift in Sources */,
 				04A0DAEA22940AEE005F02F3 /* DiscountView.swift in Sources */,
@@ -812,6 +867,7 @@
 				04F5268F228D5A2C0019417D /* UIColor+HexColor.swift in Sources */,
 				04A0DB0622940B9F005F02F3 /* ParallaxHeader.swift in Sources */,
 				04F5268D228D5A260019417D /* Common.swift in Sources */,
+				0416D818229BE242001A3D49 /* CommentForRider.swift in Sources */,
 				04A0DAE122940AEE005F02F3 /* ChooseAddressViewController.swift in Sources */,
 				04A0DB0C22940C4F005F02F3 /* UMineHead.swift in Sources */,
 				04A0DAE522940AEE005F02F3 /* CurrentPositionView.swift in Sources */,

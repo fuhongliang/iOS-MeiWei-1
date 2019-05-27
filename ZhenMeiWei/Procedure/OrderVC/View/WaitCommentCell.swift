@@ -8,8 +8,13 @@
 
 import UIKit
 
+protocol WaitCommentCellDelegate:NSObjectProtocol {
+    func comment()
+}
 class WaitCommentCell: UITableViewCell {
 
+    weak var delegate:WaitCommentCellDelegate?
+    
     @IBOutlet weak var leftBtn: UIButton!
     
     @IBOutlet weak var rightBtn: UIButton!
@@ -32,6 +37,11 @@ class WaitCommentCell: UITableViewCell {
         }
     }
     
+    @IBAction func comment(_ sender: Any) {
+        if delegate != nil{
+            delegate?.comment()
+        }
+    }
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 

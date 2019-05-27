@@ -21,14 +21,13 @@ import UIKit
 
 //渐变色
 extension UIView {
-    
     //Colors：渐变色色值数组
     func setLayerColors(_ colors:[CGColor])  {
         let layer = CAGradientLayer()
         layer.frame = bounds
         layer.colors = colors
         layer.startPoint = CGPoint(x: 0, y: 0)
-        layer.endPoint = CGPoint(x: 0, y: 1)
+        layer.endPoint = CGPoint(x: 1, y: 0)
         self.layer.addSublayer(layer)
     }
     

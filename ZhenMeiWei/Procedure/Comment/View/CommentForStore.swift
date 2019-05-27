@@ -1,5 +1,5 @@
 //
-//  AddressView.swift
+//  CommentForStore.swift
 //  ZhenMeiWei
 //
 //  Created by mac on 2019/5/27.
@@ -8,8 +8,7 @@
 
 import UIKit
 
-class AddressView: UIView ,NibloadProtocol{
+class CommentForStore: UIView ,NibloadProtocol{
 
-    @IBOutlet weak var bgView: UIView!
-    
+
 }

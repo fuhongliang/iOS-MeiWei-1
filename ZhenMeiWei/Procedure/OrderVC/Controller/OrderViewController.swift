@@ -8,7 +8,7 @@
 
 import UIKit
 
-class OrderViewController: UIViewController ,UITableViewDelegate,UITableViewDataSource,UIScrollViewDelegate,OrderTopViewDelegate{
+class OrderViewController: UIViewController ,UITableViewDelegate,UITableViewDataSource,UIScrollViewDelegate,OrderTopViewDelegate,WaitCommentCellDelegate{
     
     var topview = OrderTopView()
     
@@ -114,13 +114,14 @@ class OrderViewController: UIViewController ,UITableViewDelegate,UITableViewData
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if tableView == allTableview{
-            let cell = tableView.dequeueReusableCell(withIdentifier: "OrderTableViewCell", for: indexPath) as! OrderTableViewCell
+            let cell:OrderTableViewCell = tableView.dequeueReusableCell(withIdentifier: "OrderTableViewCell", for: indexPath) as! OrderTableViewCell
             return cell
         }else if tableView == waitTableview{
-            let cell = tableView.dequeueReusableCell(withIdentifier: "WaitCommentCell", for: indexPath) as! WaitCommentCell
+            let cell:WaitCommentCell = tableView.dequeueReusableCell(withIdentifier: "WaitCommentCell", for: indexPath) as! WaitCommentCell
+            cell.delegate = self
             return cell
         }else{
-            let cell = tableView.dequeueReusableCell(withIdentifier: "WaitCommentCell", for: indexPath) as! WaitCommentCell
+            let cell:WaitCommentCell = tableView.dequeueReusableCell(withIdentifier: "WaitCommentCell", for: indexPath) as! WaitCommentCell
             cell.setDataWithModel(data: ["state":"已退款"])
             return cell
             
@@ -177,4 +178,7 @@ class OrderViewController: UIViewController ,UITableViewDelegate,UITableViewData
         }
     }
     
+    func comment() {
+        self.navigationController?.pushViewController(CommentViewController(), animated: true)
+    }
 }

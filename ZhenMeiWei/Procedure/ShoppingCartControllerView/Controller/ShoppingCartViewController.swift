@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ShoppingCartViewController: UIViewController ,UITableViewDelegate,UITableViewDataSource{
+class ShoppingCartViewController: UIViewController ,UITableViewDelegate,UITableViewDataSource,ShoppingCartCellDelegate{
 
     var mainTableview = UITableView()
     
@@ -21,7 +21,6 @@ class ShoppingCartViewController: UIViewController ,UITableViewDelegate,UITableV
     }
     
     func setupUI() {
-        
         mainTableview.delegate = self
         mainTableview.dataSource = self
         mainTableview.register(UINib.init(nibName: "ShoppingCartCell", bundle: Bundle.main), forCellReuseIdentifier: "ShoppingCartCell")
@@ -44,19 +43,27 @@ class ShoppingCartViewController: UIViewController ,UITableViewDelegate,UITableV
         
     }
     
-    //清空购物车
-    @objc func clearShoppingCart() {
-        
-    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 15
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ShoppingCartCell", for: indexPath) as! ShoppingCartCell
+        let cell:ShoppingCartCell = tableView.dequeueReusableCell(withIdentifier: "ShoppingCartCell", for: indexPath) as! ShoppingCartCell
         cell.setDataWithModel(arr: ["111"])
+        cell.delegate = self
         return cell
     }
 
+    
+    //清空购物车
+    @objc func clearShoppingCart() {
+        
+    }
+    
+    func pay() {
+        let vc = SubmitOrderController()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
 }

@@ -8,10 +8,14 @@
 
 import UIKit
 
+protocol ShoppingCartCellDelegate:NSObjectProtocol {
+    func pay()
+}
 class ShoppingCartCell: UITableViewCell {
 
     var lastView = UIView()
     
+    weak var delegate:ShoppingCartCellDelegate?
     @IBOutlet weak var goodsBgView: UIView!
     
     override func awakeFromNib() {
@@ -108,6 +112,8 @@ class ShoppingCartCell: UITableViewCell {
     }
     
     @IBAction func payment(_ sender: Any) {
-        
+        if delegate != nil{
+            delegate?.pay()
+        }
     }
 }
