@@ -43,7 +43,7 @@ class UMeView: BaseView {
         addSubview(label)
 
         label.snp.makeConstraints{
-            $0.top.equalToSuperview().offset(63)
+            $0.top.equalToSuperview().offset(23)
             $0.left.equalToSuperview().offset(15)
             $0.right.equalToSuperview().offset(-15)
         }
@@ -53,7 +53,7 @@ class UMeView: BaseView {
         layerView.image = UIImage.init(named: "center_touxiang")
         addSubview(layerView)
         layerView.snp.makeConstraints{
-            $0.top.equalToSuperview().offset(48)
+            $0.top.equalToSuperview().offset(8)
             $0.right.equalToSuperview().offset(-15)
             $0.width.equalTo(80)
             $0.height.equalTo(80)

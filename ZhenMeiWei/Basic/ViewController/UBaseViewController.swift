@@ -11,6 +11,15 @@ import SnapKit
 import Then
 import Reusable
 import Kingfisher
+import MBProgressHUD
+
+
+public func showHUDInView(text: String, inView: UIView) {
+    let hud = MBProgressHUD.showAdded(to: inView, animated: true)
+    hud.mode = MBProgressHUDMode.text
+    hud.label.text = text
+    hud.hide(animated: true, afterDelay: 2.0)
+}
 
 class UBaseViewController: UIViewController {
     

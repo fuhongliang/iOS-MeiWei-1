@@ -12,9 +12,15 @@ protocol CodeLoginViewDelegate:NSObjectProtocol{
     func codeBack()
     func changeToPsw()
     func codeLogin()
+    func getSms(phoneNumber:String)
+    
 }
 class CodeLoginView: UIView ,NibloadProtocol{
     weak var delegate:CodeLoginViewDelegate?
+    
+    @IBOutlet weak var phoneNumberText: UITextField!
+    
+    
     @IBAction func goback(_ sender: Any) {
         if delegate != nil{
             delegate?.codeBack()
@@ -30,6 +36,13 @@ class CodeLoginView: UIView ,NibloadProtocol{
     @IBAction func login(_ sender: Any) {
         if delegate != nil{
             delegate?.codeLogin()
+        }
+    }
+    
+    
+    @IBAction func getSms(_ sender: UIButton) {
+        if delegate != nil{
+            delegate?.getSms(phoneNumber: phoneNumberText.text!)
         }
     }
 }

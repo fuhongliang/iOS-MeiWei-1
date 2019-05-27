@@ -13,6 +13,7 @@ class MeViewController: UBaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setViews()
+        self.navigationController?.isNavigationBarHidden = true
     }
     
     func setViews() {
@@ -36,12 +37,5 @@ class MeViewController: UBaseViewController {
             make.width.equalToSuperview()
         }
     }
-    
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-        self.navigationController?.isNavigationBarHidden = true
-    }
 
-    
 }
