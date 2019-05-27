@@ -9,8 +9,8 @@
 import UIKit
 
 class CodeLoginController: UIViewController,CodeLoginViewDelegate,PasswordLoginViewDelegate{
-    
-
+   
+    fileprivate var service: FAPIUserServices = FAPIUserServices()
     var codeMainview = CodeLoginView.loadNib()
     var passWordMainview = PasswordLoginView.loadNib()
     
@@ -49,26 +49,43 @@ class CodeLoginController: UIViewController,CodeLoginViewDelegate,PasswordLoginV
         }
     }
     
-    func pswBack() {
-        self.dismiss(animated: true, completion: nil)
-    }
-    func changeToCode() {
-        codeMainview.isHidden = false
-        passWordMainview.isHidden = true
-    }
-    func pswLogin() {
-        
-    }
+    //获取验证码
+    func getSms(phoneNumber: String) {
+        if phoneNumber.count != 11 {
+            showHUDInView(text: "请输入合法手机号码", inView: view)
+        }else{
+            service.getSms(phone_number: phoneNumber, { (FAPISMSResponseModel) in
+                showHUDInView(text: FAPISMSResponseModel.msg!, inView: self.view)
+            }) { (FAPIErrorModel) in
+                showHUDInView(text: FAPIErrorModel.msg!, inView: self.view)
+            }
+        }
     
-    func codeBack() {
-        self.dismiss(animated: true, completion: nil)
-    }
-    func changeToPsw() {
-        codeMainview.isHidden = true
-        passWordMainview.isHidden = false
-    }
-    func codeLogin() {
-        
-    }
+}
+
+
+
+func pswBack() {
+    self.dismiss(animated: true, completion: nil)
+}
+func changeToCode() {
+    codeMainview.isHidden = false
+    passWordMainview.isHidden = true
+}
+func pswLogin() {
     
+}
+
+func codeBack() {
+    self.dismiss(animated: true, completion: nil)
+}
+func changeToPsw() {
+    codeMainview.isHidden = true
+    passWordMainview.isHidden = false
+}
+
+func codeLogin() {
+    
+}
+
 }
