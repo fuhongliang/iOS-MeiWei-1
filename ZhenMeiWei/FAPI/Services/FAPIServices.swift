@@ -80,30 +80,6 @@ extension NetFAPI: TargetType {
         case .getSms(let phone_number):
             let params: [String:String] = ["phone_number":phone_number]
             return .requestParameters(parameters: params, encoding: JSONEncoding.default)
-         
-//        case .login(let user):
-//            return .requestParameters(parameters: user, encoding: JSONEncoding.default)
-//        case .logout(let userId):
-//            return .requestParameters(parameters: ["userid":userId], encoding: JSONEncoding.default)
-//        case .fetchFriends:
-//            return .requestParameters(parameters: [:], encoding: URLEncoding.default)
-//        case .updateProfile(_, let userName, let password, let newPassword):
-//            let params: [String:String] = ["name":userName,"password":password,"newpassword":newPassword]
-//            return .requestParameters(parameters: params, encoding: JSONEncoding.default)
-//        case .addFriend(_, let friendid, let verif_code):
-//            let params: [String:String] = ["friendid":friendid,"verif_code":verif_code]
-//            return .requestParameters(parameters: params, encoding: JSONEncoding.default)
-//        case .sendMessage(_, let receive, let message):
-//            let params: [String:String] = ["receive":receive,"message":message]
-//            return .requestParameters(parameters: params, encoding: JSONEncoding.default)
-//        case .getMessageList:
-//            return .requestParameters(parameters: [:], encoding: URLEncoding.default)
-//        case .getMessage:
-//            return .requestParameters(parameters: [:], encoding: URLEncoding.default)
-//        case .sendBomb(_):
-//            return .requestParameters(parameters: [:],  encoding: JSONEncoding.default)
-//        case .acceptNewFriend(_,let friendid):
-//            return .requestParameters(parameters: ["friendid":friendid], encoding: JSONEncoding.default)
         }
     }
     
