@@ -20,7 +20,7 @@ class CodeLoginView: UIView ,NibloadProtocol{
     
     @IBOutlet weak var phoneNumberText: UITextField!
     
-    
+    @IBOutlet weak var codeText: UITextField!
     @IBAction func goback(_ sender: Any) {
         if delegate != nil{
             delegate?.codeBack()

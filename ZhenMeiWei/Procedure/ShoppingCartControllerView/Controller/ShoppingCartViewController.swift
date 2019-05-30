@@ -9,9 +9,8 @@
 import UIKit
 
 class ShoppingCartViewController: UIViewController ,UITableViewDelegate,UITableViewDataSource,ShoppingCartCellDelegate{
-
-    var mainTableview = UITableView()
     
+    var mainTableview:UITableView = UITableView()
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -50,7 +49,7 @@ class ShoppingCartViewController: UIViewController ,UITableViewDelegate,UITableV
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:ShoppingCartCell = tableView.dequeueReusableCell(withIdentifier: "ShoppingCartCell", for: indexPath) as! ShoppingCartCell
-        cell.setDataWithModel(arr: ["111"])
+        cell.setDataWithModel(arr: ["111","222"])
         cell.delegate = self
         return cell
     }
@@ -58,7 +57,32 @@ class ShoppingCartViewController: UIViewController ,UITableViewDelegate,UITableV
     
     //清空购物车
     @objc func clearShoppingCart() {
+        // 提示框
+        let alertController = UIAlertController(
+            title: "温馨提示",
+            message: "确认删除该商家的所有商品？",
+            preferredStyle: .alert)
         
+        // 删除
+        let delete = UIAlertAction(
+            title: "删除",
+            style: .default,
+            handler: {
+                (action: UIAlertAction!) -> Void in
+                
+        })
+        // 取消
+        let cancel = UIAlertAction(
+            title: "取消",
+            style: .cancel,
+            handler: {
+                (action: UIAlertAction!) -> Void in
+                
+        })
+        alertController.addAction(delete)
+        alertController.addAction(cancel)
+        // 展示提示框
+        self.present(alertController, animated: true, completion: nil)
     }
     
     func pay() {

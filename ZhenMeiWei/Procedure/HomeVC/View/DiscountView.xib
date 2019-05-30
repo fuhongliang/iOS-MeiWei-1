@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -17,7 +16,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gwx-uV-vVM">
-                    <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tab_icon_youhui" translatesAutoresizingMaskIntoConstraints="NO" id="nQj-N4-fGk">
                             <rect key="frame" x="15" y="15" width="14" height="14"/>
@@ -195,12 +194,16 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Gwx-uV-vVM" secondAttribute="bottom" id="0wu-T0-Qjv"/>
-                <constraint firstItem="Gwx-uV-vVM" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="7bf-z7-Cbn"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Gwx-uV-vVM" secondAttribute="trailing" id="WLH-KP-1gV"/>
-                <constraint firstItem="Gwx-uV-vVM" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="YBP-yX-bv3"/>
+                <constraint firstAttribute="bottom" secondItem="Gwx-uV-vVM" secondAttribute="bottom" id="0wu-T0-Qjv"/>
+                <constraint firstItem="Gwx-uV-vVM" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="7bf-z7-Cbn"/>
+                <constraint firstAttribute="trailing" secondItem="Gwx-uV-vVM" secondAttribute="trailing" id="WLH-KP-1gV"/>
+                <constraint firstItem="Gwx-uV-vVM" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="YBP-yX-bv3"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="discountImage" destination="MLC-91-6zp" id="kpt-mQ-dFJ"/>
+                <outlet property="fullReduceImage" destination="TlQ-Vf-Ilf" id="P4E-Kj-gpO"/>
+                <outlet property="limitDiscountImage" destination="t74-RO-PQ5" id="Mvu-x7-DV1"/>
+            </connections>
             <point key="canvasLocation" x="138.40000000000001" y="142.57871064467767"/>
         </view>
     </objects>

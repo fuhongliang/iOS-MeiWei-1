@@ -10,5 +10,13 @@ import UIKit
 
 class DiscountView: UIView ,NibloadProtocol{
 
-
+    @IBOutlet weak var limitDiscountImage: UIImageView!
+    
+    @IBOutlet weak var fullReduceImage: UIImageView!
+    
+    @IBOutlet weak var discountImage: UIImageView!
+    
+    func setData(arr:NSArray) {
+        
+    }
 }

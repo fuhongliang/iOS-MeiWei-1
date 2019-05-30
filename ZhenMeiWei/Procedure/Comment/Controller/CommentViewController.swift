@@ -32,6 +32,8 @@ class CommentViewController: UIViewController {
         scroll.frame = CGRect(x: 0, y: ViewStart_Y, width: Screen_W, height: Screen_H-ViewStart_Y)
         view.addSubview(scroll)
         
+        riderview.layer.cornerRadius = 3
+        riderview.layer.masksToBounds = true
         scroll.addSubview(riderview)
         riderview.snp.makeConstraints { (make) in
             make.top.equalTo(scroll.snp.top).offset(15)
@@ -39,6 +41,9 @@ class CommentViewController: UIViewController {
             make.right.equalTo(scroll.snp.right).offset(-15)
             make.width.equalTo(Screen_W-30)
         }
+        
+        storeview.layer.cornerRadius = 3
+        storeview.layer.masksToBounds = true
         scroll.addSubview(storeview)
         storeview.snp.makeConstraints { (make) in
             make.top.equalTo(riderview.snp.bottom).offset(15)
@@ -52,6 +57,7 @@ class CommentViewController: UIViewController {
         commentBtn.setTitleColor(UIColor.white, for: UIControl.State.normal)
         commentBtn.layer.cornerRadius = 3
         commentBtn.layer.masksToBounds = true
+        commentBtn.addTarget(self, action: #selector(handleComment), for: UIControl.Event.touchUpInside)
         scroll.addSubview(commentBtn)
         commentBtn.snp.makeConstraints { (make) in
             make.top.equalTo(storeview.snp.bottom).offset(30)
@@ -62,5 +68,9 @@ class CommentViewController: UIViewController {
             make.bottom.equalTo(scroll.snp.bottom).offset(-20)
         }
         
+    }
+    
+    @objc func handleComment() {
+        self.navigationController?.pushViewController(CommentSuccessController(), animated: true)
     }
 }

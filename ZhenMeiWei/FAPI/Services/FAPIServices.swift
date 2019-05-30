@@ -12,6 +12,9 @@ import Foundation
 import Moya
 import Alamofire
 import MBProgressHUD
+import SwiftyJSON
+
+let service: FAPIUserServices = FAPIUserServices()
 
 fileprivate let ssl: Bool = false
 //开发环境接口地址 http://47.111.27.189:88/u1/
@@ -32,7 +35,6 @@ let loadingPlugin = NetworkActivityPlugin { (type, target) in
 }
 
 let TimeoutClosure = {(endpoint: Endpoint, closure: MoyaProvider<NetFAPI>.RequestResultClosure) -> Void in
-    
     if var urlRequest = try? endpoint.urlRequest() {
         urlRequest.timeoutInterval = 20
         closure(.success(urlRequest))
@@ -43,6 +45,8 @@ let TimeoutClosure = {(endpoint: Endpoint, closure: MoyaProvider<NetFAPI>.Reques
 
 enum NetFAPI {
     case getSms(phone_number:String)
+    case home_page(longitude:String, dimension:String, type:String)
+    case sms_login(phone_number:String, code:String, device_tokens:String, app_type:String)
 }
 
 extension NetFAPI: TargetType {
@@ -60,15 +64,21 @@ extension NetFAPI: TargetType {
        
         case .getSms(_):
             return "get_sms/"
+        case .home_page(_):
+            return "home_page/"
+        case .sms_login(_):
+            return "sms_login/"
         }
+        
         
     }
     
     var method: Moya.Method {
-        switch self {
-        case .getSms:
-            return .post
-        }
+//        switch self {
+//        case .getSms:
+//            return .post
+//        }
+        return .post
     }
     
     var sampleData: Data {
@@ -80,11 +90,24 @@ extension NetFAPI: TargetType {
         case .getSms(let phone_number):
             let params: [String:String] = ["phone_number":phone_number]
             return .requestParameters(parameters: params, encoding: JSONEncoding.default)
+        case .home_page(let longitude, let dimension, let type):
+            var params: [String:Any] = [:]
+            params["longitude"] = longitude
+            params["dimension"] = dimension
+            params["type"] = type
+            return .requestParameters(parameters: params, encoding: JSONEncoding.default)
+        case .sms_login(let phone_number, let code, let device_tokens, let app_type):
+            var params: [String:Any] = [:]
+            params["phone_number"] = phone_number
+            params["code"] = code
+            params["device_tokens"] = device_tokens
+            params["app_type"] = app_type
+            return .requestParameters(parameters: params, encoding: JSONEncoding.default)
         }
     }
     
     var headers: [String : String]? {
-        var dict: [String:String] = [
+        let dict: [String:String] = [
             "Content-Type":"application/json"
         ]
         switch self {
@@ -172,7 +195,7 @@ class FAPIService {
     
     fileprivate(set) var apiProvider: MoyaProvider<NetFAPI>!
     
-    func request(_ target: NetFAPI, _ success: @escaping ((Data) -> ()), _ fail: @escaping ((FAPIErrorModel) -> ())) {
+    func request(_ target: NetFAPI, _ success: @escaping ((NSDictionary) -> ()), _ fail: @escaping ((FAPIErrorModel) -> ())) {
         apiProvider.request(target) { (result) in
             print("--------接口响应----------------")
             switch result {
@@ -187,7 +210,7 @@ class FAPIService {
                             if mapData.keys.contains("code") {
                                 if let code = mapData["code"] as? Int {
                                     if code == 200 {
-                                        success(data)
+                                        success(anyData as! NSDictionary)
                                     }
                                     else {
                                         let msg: String = mapData["msg"] as? String ?? "Error message"

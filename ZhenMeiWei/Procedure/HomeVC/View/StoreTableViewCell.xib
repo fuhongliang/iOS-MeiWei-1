@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -158,7 +157,19 @@
                     <constraint firstAttribute="bottom" secondItem="A24-oq-2Yg" secondAttribute="bottom" id="kxN-7f-QtA"/>
                 </constraints>
             </tableViewCellContentView>
-            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="distance" destination="e3p-VF-g97" id="T0V-Wx-mng"/>
+                <outlet property="salesNumber" destination="CI1-XN-eoD" id="cM4-09-Mou"/>
+                <outlet property="star1" destination="L2f-3p-r2O" id="Z0L-46-VA1"/>
+                <outlet property="star2" destination="zQQ-62-Dxi" id="dJ8-Tz-ZKc"/>
+                <outlet property="star3" destination="qwb-8H-C46" id="Mau-8G-KBQ"/>
+                <outlet property="star4" destination="PIO-Ih-sz2" id="S74-S0-y8U"/>
+                <outlet property="star5" destination="sBz-rc-WWm" id="RaK-S7-KZb"/>
+                <outlet property="startLimitPrice" destination="RBO-65-0H0" id="AMh-4r-Exf"/>
+                <outlet property="storeImage" destination="he8-1a-U5m" id="N0e-s4-Pcd"/>
+                <outlet property="storeName" destination="ZL1-dG-fge" id="ad0-7R-ZOl"/>
+                <outlet property="time" destination="Udk-iI-fdR" id="SAr-ph-EHV"/>
+            </connections>
             <point key="canvasLocation" x="137.59999999999999" y="142.1289355322339"/>
         </tableViewCell>
     </objects>

@@ -85,7 +85,7 @@ class OrderDetailViewController: UIViewController ,OrderDetailHeaderViewDelegate
             make.left.equalTo(scroll.snp.left).offset(15)
             make.top.equalTo(distribution.snp.bottom).offset(15)
             make.right.equalTo(scroll.snp.right).offset(-15)
-            make.bottom.equalToSuperview()
+            make.bottom.equalTo(scroll.snp.bottom).offset(-30)
             make.width.equalTo(Screen_W-30)
         }
 

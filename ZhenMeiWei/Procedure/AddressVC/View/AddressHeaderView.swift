@@ -61,8 +61,8 @@ class AddressHeaderView: UIView {
         addressIcon.snp.makeConstraints {  make in
             make.left.equalTo(topBgView.snp.left).offset(15)
             make.top.equalTo(topBgView.snp.top).offset(10)
-            make.width.equalTo(10)
-            make.height.equalTo(14)
+            make.width.equalTo(19)
+            make.height.equalTo(19)
         }
         addressBtn.snp.makeConstraints {  make in
             make.left.equalTo(addressIcon.snp.right).offset(7)

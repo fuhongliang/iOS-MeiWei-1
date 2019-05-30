@@ -32,21 +32,25 @@ class SectionHeaderView: UIView ,NibloadProtocol{
     @IBOutlet weak var lineView: UIView!
     
     @IBAction func commentAction(_ sender: Any) {
+        lineView.center.x = commentBtn.center.x
         if delegate != nil{
             delegate?.comment()
         }
     }
     @IBAction func mostSalesAction(_ sender: Any) {
+        lineView.center.x = salesNumberBtn.center.x
         if delegate != nil{
             delegate?.sales()
         }
     }
     @IBAction func distanceAction(_ sender: Any) {
+        lineView.center.x = distanceBtn.center.x
         if delegate != nil{
             delegate?.distance()
         }
     }
     @IBAction func mostGoodsCommentAction(_ sender: Any) {
+        lineView.center.x = mostGoodsCommetsBtn.center.x
         if delegate != nil{
             delegate?.mostGoodsComments()
         }
