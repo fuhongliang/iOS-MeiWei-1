@@ -12,11 +12,15 @@ import Foundation
 import Moya
 import Alamofire
 import MBProgressHUD
+import SwiftyJSON
+
+let service: FAPIUserServices = FAPIUserServices()
 
 fileprivate let ssl: Bool = false
-fileprivate let baseHTTPSURLString: String = "https://XXXXXXXXXX"
-fileprivate let baseHTTPURLString: String = "http://XXXXXXXXX"
-fileprivate let baseURLIP: String = "XXXXXXXX"
+//开发环境接口地址 http://47.111.27.189:88/u1/
+fileprivate let baseHTTPSURLString: String = "https://47.111.27.189:88/u1/"
+fileprivate let baseHTTPURLString: String = "http://47.111.27.189:88/u1/"
+fileprivate let baseURLIP: String = "47.111.27.189:88/u1/"
 
 
 let loadingPlugin = NetworkActivityPlugin { (type, target) in
@@ -31,7 +35,6 @@ let loadingPlugin = NetworkActivityPlugin { (type, target) in
 }
 
 let TimeoutClosure = {(endpoint: Endpoint, closure: MoyaProvider<NetFAPI>.RequestResultClosure) -> Void in
-    
     if var urlRequest = try? endpoint.urlRequest() {
         urlRequest.timeoutInterval = 20
         closure(.success(urlRequest))
@@ -41,17 +44,9 @@ let TimeoutClosure = {(endpoint: Endpoint, closure: MoyaProvider<NetFAPI>.Reques
 }
 
 enum NetFAPI {
-    case regist(newUser: [String:String])
-    case login(user: [String:String])
-    case logout(userId: String)
-    case fetchFriends(userId: String)
-    case updateProfile(userId: String, userName: String, password: String, newPassword: String)
-    case addFriend(userId: String,friendid: String,verif_code: String)
-    case sendMessage(userId: String,receive: String,message: String)
-    case getMessageList(userId: String)
-    case getMessage(userId: String,msg_id: String)
-    case sendBomb(userId: String)
-    case acceptNewFriend(user_id:String,friendid:String)
+    case getSms(phone_number:String)
+    case home_page(longitude:String, dimension:String, type:String)
+    case sms_login(phone_number:String, code:String, device_tokens:String, app_type:String)
 }
 
 extension NetFAPI: TargetType {
@@ -66,54 +61,24 @@ extension NetFAPI: TargetType {
     
     var path: String {
         switch self {
-        case .regist:
-            return "/users/"
-        case .login:
-            return "/tokens/"
-        case .logout(let userId):
-            return "/tokens/" + userId + "/"
-        case .fetchFriends(let userId):
-            return "/frends/" + userId + "/"
-        case .updateProfile(let userId, _, _, _):
-            return "/users/" + userId + "/"
-        case .addFriend(let userId, _, _):
-            return "/frends/"+userId+"/req/"
-        case .sendMessage(let userId, _, _):
-            return "/messsages/" + userId + "/"
-        case .getMessageList(let userId):
-            return "/messsages/" + userId + "/"
-        case .getMessage(let userId, let msg_id):
-            return "/messsages/" + userId + msg_id + "/"
-        case .sendBomb(let userId):
-            return "/bombs/" + userId + "/"
-        case .acceptNewFriend(let user_id,_):
-            return "/frends/" + user_id + "/accept/"
+       
+        case .getSms(_):
+            return "get_sms/"
+        case .home_page(_):
+            return "home_page/"
+        case .sms_login(_):
+            return "sms_login/"
         }
+        
+        
     }
     
     var method: Moya.Method {
-        switch self {
-        case .regist, .login:
-            return .post
-        case .logout:
-            return .delete
-        case .fetchFriends:
-            return .get
-        case .updateProfile:
-            return .put
-        case .addFriend:
-            return .post
-        case .sendMessage:
-            return .post
-        case .getMessageList:
-            return .get
-        case .getMessage:
-            return .get
-        case .sendBomb:
-            return .post
-        case .acceptNewFriend:
-            return .post
-        }
+//        switch self {
+//        case .getSms:
+//            return .post
+//        }
+        return .post
     }
     
     var sampleData: Data {
@@ -122,42 +87,33 @@ extension NetFAPI: TargetType {
     
     var task: Task {
         switch self {
-        case .regist(let newUser):
-            return .requestParameters(parameters: newUser, encoding: JSONEncoding.default)
-        case .login(let user):
-            return .requestParameters(parameters: user, encoding: JSONEncoding.default)
-        case .logout(let userId):
-            return .requestParameters(parameters: ["userid":userId], encoding: JSONEncoding.default)
-        case .fetchFriends:
-            return .requestParameters(parameters: [:], encoding: URLEncoding.default)
-        case .updateProfile(_, let userName, let password, let newPassword):
-            let params: [String:String] = ["name":userName,"password":password,"newpassword":newPassword]
+        case .getSms(let phone_number):
+            let params: [String:String] = ["phone_number":phone_number]
             return .requestParameters(parameters: params, encoding: JSONEncoding.default)
-        case .addFriend(_, let friendid, let verif_code):
-            let params: [String:String] = ["friendid":friendid,"verif_code":verif_code]
+        case .home_page(let longitude, let dimension, let type):
+            var params: [String:Any] = [:]
+            params["longitude"] = longitude
+            params["dimension"] = dimension
+            params["type"] = type
             return .requestParameters(parameters: params, encoding: JSONEncoding.default)
-        case .sendMessage(_, let receive, let message):
-            let params: [String:String] = ["receive":receive,"message":message]
+        case .sms_login(let phone_number, let code, let device_tokens, let app_type):
+            var params: [String:Any] = [:]
+            params["phone_number"] = phone_number
+            params["code"] = code
+            params["device_tokens"] = device_tokens
+            params["app_type"] = app_type
             return .requestParameters(parameters: params, encoding: JSONEncoding.default)
-        case .getMessageList:
-            return .requestParameters(parameters: [:], encoding: URLEncoding.default)
-        case .getMessage:
-            return .requestParameters(parameters: [:], encoding: URLEncoding.default)
-        case .sendBomb(_):
-            return .requestParameters(parameters: [:],  encoding: JSONEncoding.default)
-        case .acceptNewFriend(_,let friendid):
-            return .requestParameters(parameters: ["friendid":friendid], encoding: JSONEncoding.default)
         }
     }
     
     var headers: [String : String]? {
-        var dict: [String:String] = [
+        let dict: [String:String] = [
             "Content-Type":"application/json"
         ]
         switch self {
-        case .logout, .fetchFriends, .updateProfile, .addFriend , .sendMessage, .getMessageList,.getMessage,.sendBomb,.acceptNewFriend:
-            let token: String = getToken() // 本地token
-            dict["token"] = token
+//        case .logout, .fetchFriends, .updateProfile, .addFriend , .sendMessage, .getMessageList,.getMessage,.sendBomb,.acceptNewFriend:
+//            let token: String = getToken() // 本地token
+//            dict["token"] = token
         default:
             break
         }
@@ -239,7 +195,7 @@ class FAPIService {
     
     fileprivate(set) var apiProvider: MoyaProvider<NetFAPI>!
     
-    func request(_ target: NetFAPI, _ success: @escaping ((Data) -> ()), _ fail: @escaping ((FAPIErrorModel) -> ())) {
+    func request(_ target: NetFAPI, _ success: @escaping ((NSDictionary) -> ()), _ fail: @escaping ((FAPIErrorModel) -> ())) {
         apiProvider.request(target) { (result) in
             print("--------接口响应----------------")
             switch result {
@@ -252,9 +208,9 @@ class FAPIService {
                     if statusCode == 200 {
                         if let mapData: [String:Any] = anyData as? [String:Any] {
                             if mapData.keys.contains("code") {
-                                if let code = mapData["code"] as? String {
-                                    if code == "200" {
-                                        success(data)
+                                if let code = mapData["code"] as? Int {
+                                    if code == 200 {
+                                        success(anyData as! NSDictionary)
                                     }
                                     else {
                                         let msg: String = mapData["msg"] as? String ?? "Error message"
@@ -263,46 +219,46 @@ class FAPIService {
                                     }
                                 }
                                 else {
-                                    let errorModel = FAPIErrorModel.getErrorModel(_code: String(moyaResponse.statusCode), _message: "Data not contain code", _error: nil)
+                                    let errorModel = FAPIErrorModel.getErrorModel(_code: moyaResponse.statusCode, _message: "Data not contain code", _error: nil)
                                     fail(errorModel)
                                 }
                             }
                             else {
-                                let errorModel = FAPIErrorModel.getErrorModel(_code: String(moyaResponse.statusCode), _message: "Data not contain code", _error: nil)
+                                let errorModel = FAPIErrorModel.getErrorModel(_code: moyaResponse.statusCode, _message: "Data not contain code", _error: nil)
                                 fail(errorModel)
                             }
                         }
                         else {
-                            let errorModel = FAPIErrorModel.getErrorModel(_code: String(moyaResponse.statusCode), _message: String(moyaResponse.description), _error: nil)
+                            let errorModel = FAPIErrorModel.getErrorModel(_code: moyaResponse.statusCode, _message: String(moyaResponse.description), _error: nil)
                             fail(errorModel)
                         }
-                    }else if statusCode == 401 {//token过期
-                       // (UIApplication.shared.delegate as! AppDelegate).showLoginView()
+                    }else if statusCode == 3000 ||  statusCode == 3001 ||  statusCode == 3002 {//token过期
+                        (UIApplication.shared.delegate as! AppDelegate).showLoginView()
                     }
                     else {
                         if let mapData: [String:Any] = anyData as? [String:Any] {
                             if mapData.keys.contains("message") {
                                 if let message = mapData["message"] as? String {
-                                    let errorModel = FAPIErrorModel.getErrorModel(_code: String(moyaResponse.statusCode), _message: message, _error: nil)
+                                    let errorModel = FAPIErrorModel.getErrorModel(_code: moyaResponse.statusCode, _message: message, _error: nil)
                                     fail(errorModel)
                                 }
                             }
                             
                         }else{
-                            let errorModel = FAPIErrorModel.getErrorModel(_code: String(moyaResponse.statusCode), _message: String(moyaResponse.description), _error: nil)
+                            let errorModel = FAPIErrorModel.getErrorModel(_code: moyaResponse.statusCode, _message: String(moyaResponse.description), _error: "数据解析异常")
                             fail(errorModel)
                         }
                     }
                     
                 } catch {
                     print(error.localizedDescription)
-                    let errorModel = FAPIErrorModel.getErrorModel(_code: String(moyaResponse.statusCode), _message: nil, _error: error)
+                    let errorModel = FAPIErrorModel.getErrorModel(_code: moyaResponse.statusCode, _message: "数据解析异常", _error: "数据解析异常")
                     fail(errorModel)
                 }
                 
             case let .failure(error):
                 print(error.localizedDescription)
-                let errorModel = FAPIErrorModel.getErrorModel(_code: nil, _message: nil, _error: error)
+                let errorModel = FAPIErrorModel.getErrorModel(_code: nil, _message: "数据解析异常", _error: "数据解析异常")
                 fail(errorModel)
             }
             print("----------响应结束--------------")

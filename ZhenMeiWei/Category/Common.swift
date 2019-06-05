@@ -38,6 +38,8 @@ let kThemeDimGrayColor = UIColor.hexColor(0x696969)
 let kThemeBlackColor = UIColor.hexColor(0x000000)
 let kThemeBackgroundColor = UIColor.hexColor(0xF4F4F4)
 
+let image_path = "http://pqk40fvkr.bkt.clouddn.com/"
+let device_token = "ef6aa2210b964d8a21dd5e667473f63d327716a4debfa8a277025ccb4be46897"
 
 import SnapKit
 import AFNetworking

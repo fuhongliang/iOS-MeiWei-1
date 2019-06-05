@@ -43,7 +43,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
+    
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        let nsdataStr = NSData.init(data: deviceToken)
+        let datastr = nsdataStr.description.replacingOccurrences(of: "<", with: "").replacingOccurrences(of: ">", with: "").replacingOccurrences(of: " ", with: "")
+        print("deviceToken:\(datastr)")
+    }
 
-
+    func showLoginView() -> Void {
+        FAPIUser.shared.cleanUser()
+        let loginVC = CodeLoginController()
+        let loginNav = UINavigationController.init(rootViewController: loginVC)
+        self.window?.rootViewController = loginNav
+    }
 }
+    
+
 
